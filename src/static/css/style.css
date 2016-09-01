@@ -1,5 +1,14 @@
+/* Add in body padding to ensure that no content is initally covered by the navbar*/
 body {
   padding-top: 70px;
+}
+
+/*Set fonts to google open source font*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+p, div {
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .projectPreviewImage {
