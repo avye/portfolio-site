@@ -29,10 +29,17 @@ export default class IndexPage extends React.Component {
           <WelcomeGreeting/>
         </div>
         <Element name="ScrollToPortfolio">
-          <div >
+          <div className="container text-center">
             {projects.map(projectData => <ProjectPreview key={projectData.id} {...projectData} />)}
           </div>
         </Element>
+        <div className="container text-center">
+          <p className="text-center">Interested in making something together?</p>
+          {/*<LinkContainer to={{ pathname: 'contact' }}>
+            <Button>Contact</Button>
+          </LinkContainer>*/}
+        </div>
+
       </div>
     );
   }

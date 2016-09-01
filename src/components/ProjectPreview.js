@@ -9,7 +9,7 @@ export default class ProjectPreview extends React.Component {
   render() {
     return (
       // <Link to={`/project/${this.props.id}`}>
-        <div className="container">
+        <div className="container center-text">
           <h2 className="center-text">{this.props.name}</h2>
           <h4 className="center-text">{this.props.subtitle}</h4>
           <div>
@@ -17,7 +17,7 @@ export default class ProjectPreview extends React.Component {
           </div>
           <p className="center-text">{this.props.description}</p>
           {/*<LinkContainer to={`/project/${this.props.id}`}>*/}
-            {/*<Button>View More</Button>*/}
+            <Button className="center-block">View More</Button>
           {/*</LinkContainer>*/}
         </div>
       // </Link>

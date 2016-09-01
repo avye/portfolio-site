@@ -14,16 +14,9 @@ export default class Layout extends React.Component {
           <NavBar />
         </header>
         <div>{this.props.children}</div>
-        <div className="container">
-          <p>Interested in making something together?</p>
-          {/*<LinkContainer to={{ pathname: 'contact' }}>
-            <Button>Contact</Button>
-          </LinkContainer>*/}
-        </div>
         <footer>
         <a href="https://www.linkedin.com/in/andrewvye">LinkedIn</a>
         <a href="https://github.com/avye">GitHub</a>
-
         </footer>
       </div>
     );
