@@ -7,10 +7,11 @@ export default class AboutPage extends React.Component {
   render() {
     return (
       <div className="container">
-        <h2>Page not about me!</h2>
-        <p>
-          <Link to="/">Go back to the main page</Link>
-        </p>
+        <div className="row">
+          <div className="">
+            <h2>Andrew Vye</h2>
+          </div>
+        </div>
       </div>
     );
   }

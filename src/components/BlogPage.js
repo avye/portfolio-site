@@ -7,7 +7,7 @@ export default class BlogPage extends React.Component {
   render() {
     return (
       <div className="container">
-        <h2>Page not about my blog!</h2>
+        <h2>Blog integration coming soon!</h2>
         <p>
           <Link to="/">Go back to the main page</Link>
         </p>

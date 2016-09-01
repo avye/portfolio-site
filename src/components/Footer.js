@@ -27,14 +27,12 @@ export default class NavBar extends React.Component {
             <p>Copyright 2016 Andrew Vye</p>
           </Navbar.Brand>
         </Navbar.Header>
-        <Nav>
-          <LinkContainer to={{ pathname: 'contact' }}>
-            <NavItem eventKey={3}><Button>Contact</Button></NavItem>
-          </LinkContainer>
-        </Nav>
         <Nav pullRight>
           <NavItem eventKey={1} href="https://www.linkedin.com/in/andrewvye"><img src="/img/LinkedIn-25.png"></img></NavItem>
           <NavItem eventKey={2} href="https://github.com/avye"><img src="/img/GitHub-25.png"></img></NavItem>
+          <LinkContainer to={{ pathname: 'contact' }}>
+            <NavItem eventKey={3}><img src="/img/Message-25.png"></img></NavItem>
+          </LinkContainer>
         </Nav>
       </Navbar>
     );
