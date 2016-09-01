@@ -21,7 +21,7 @@ export default class NavBar extends React.Component {
 
   render() {
     return (
-      <Navbar fixedTop fluid>
+      <Navbar fixedTop>
         <Navbar.Header>
           <Navbar.Brand>
             <Link to="/">
