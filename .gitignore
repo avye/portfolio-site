@@ -1,0 +1,11 @@
+## NPM ##
+node_modules/
+
+## Mac OSX ##
+.DS_Store
+
+## Bundle ##
+src/static/js
+
+## Babel ##
+babel_cache/
