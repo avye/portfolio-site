@@ -25,7 +25,7 @@ export default class NavBar extends React.Component {
         <Navbar.Header>
           <Navbar.Brand>
             <Link to="/">
-              <p>AV</p>
+              <h4>AV</h4>
             </Link>
           </Navbar.Brand>
         </Navbar.Header>
