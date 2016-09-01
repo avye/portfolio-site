@@ -34,7 +34,7 @@ export default class NavBar extends React.Component {
             <span><img src="/img/Menu-25.png"></img></span>
            } id="basic-nav-dropdown" noCaret>
             <LinkContainer to={{ pathname: '/', query: { work: 'work' } }}>
-              <MenuItem eventKey={1.1}>Work</MenuItem>
+              <MenuItem eventKey={1.1} onClick={() => this.onWorkButtonClick()}>Work</MenuItem>
             </LinkContainer>
             <LinkContainer to={{ pathname: 'blog' }}>
               <MenuItem eventKey={1.2}>Blog</MenuItem>
@@ -44,7 +44,7 @@ export default class NavBar extends React.Component {
             </LinkContainer>
             <MenuItem divider />
             <LinkContainer to={{ pathname: 'contact' }}>
-              <MenuItem eventKey={1.3} onClick={() => this.onWorkButtonClick()}>Contact</MenuItem>
+              <MenuItem eventKey={1.3} >Contact</MenuItem>
             </LinkContainer>
           </NavDropdown>
         </Nav>

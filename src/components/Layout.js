@@ -3,6 +3,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import NavBar from './NavBar';
+import Footer from './Footer';
 import Button from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
@@ -15,8 +16,7 @@ export default class Layout extends React.Component {
         </header>
         <div>{this.props.children}</div>
         <footer>
-        <a href="https://www.linkedin.com/in/andrewvye">LinkedIn</a>
-        <a href="https://github.com/avye">GitHub</a>
+          <Footer />
         </footer>
       </div>
     );

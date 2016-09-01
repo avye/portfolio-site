@@ -4,6 +4,8 @@ import React from 'react';
 import ProjectPreview from './ProjectPreview';
 import WelcomeGreeting from './WelcomeGreeting';
 import projects from '../data/projects';
+import { Button } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 
 var Scroll = require('react-scroll');
 var Element = Scroll.Element;
@@ -35,9 +37,9 @@ export default class IndexPage extends React.Component {
         </Element>
         <div className="container text-center">
           <p className="text-center">Interested in making something together?</p>
-          {/*<LinkContainer to={{ pathname: 'contact' }}>
-            <Button>Contact</Button>
-          </LinkContainer>*/}
+          <LinkContainer to={{ pathname: 'contact' }}>
+            <Button>Contact Me</Button>
+          </LinkContainer>
         </div>
 
       </div>
