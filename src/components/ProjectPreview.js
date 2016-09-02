@@ -16,18 +16,20 @@ export default class ProjectPreview extends React.Component {
             </div>
           </div>
           <div className="row">
-            <div className="col-xs-10 col-md-4 col-md-offset-1 col-xs-offset-1">
-              <img className="img-responsive img-rounded projectPreviewImage" src={`img/${this.props.image}`}/>
+            <div className="col-xs-10 col-md-5 col-xs-offset-1">
+              <img className="img-responsive img-rounded projectPreviewImage" src={`img/${this.props.image1}`}/>
             </div>
-            <div className="col-xs-10 col-md-4 col-md-offset-2 col-xs-offset-1">
-              <img className="img-responsive img-rounded projectPreviewImage" src={`img/${this.props.image}`}/>
+            <div className="col-xs-10 col-md-5 col-xs-offset-1">
+              <img className="img-responsive img-rounded projectPreviewImage" src={`img/${this.props.image2}`}/>
             </div>
           </div>
           <div className="row">
             <div className="col-xs-6 col-md-6 col-md-offset-3 col-xs-offset-3 center-text">
               <p className="">{this.props.description}</p>
               {/*<LinkContainer to={`/project/${this.props.id}`}>*/}
-                <Button className="">View More</Button>
+                <a href={`${this.props.link}`}>
+                  <Button className="">{this.props.button}</Button>
+                </a>
               {/*</LinkContainer>*/}
             </div>
           </div>

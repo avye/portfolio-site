@@ -3,26 +3,32 @@
 const projects = [
   {
     id: 'followthru',
-    name: 'savor',
+    name: 'followthru',
     subtitle: 'UI, FRONT-END DESIGN, BACK-END ARCHITECTURE',
-    image: 'savor.png',
+    image1: 'savor1.png',
+    image2: 'savor2.png',
     link: 'https://savor-app.herokuapp.com/#/',
+    button: 'View Site',
     description: 'Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. '
   },
   {
     id: 'savor',
-    name: 'savor',
+    name: 'Savor',
     subtitle: 'UI, FRONT-END DESIGN, BACK-END ARCHITECTURE',
-    image: 'savor.png',
+    image1: 'savor1.png',
+    image2: 'savor2.png',
     link: 'https://savor-app.herokuapp.com/#/',
+    button: 'View Site',
     description: 'Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. '
   },
   {
     id: 'trex-timer',
-    name: 'savor',
+    name: 'Trex Timer',
     subtitle: 'UI, FRONT-END DESIGN, BACK-END ARCHITECTURE',
-    image: 'savor.png',
+    image1: 'savor1.png',
+    image2: 'savor2.png',
     link: 'https://savor-app.herokuapp.com/#/',
+    button: 'View Site',
     description: 'Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. '
   }
 ];
