@@ -9,28 +9,26 @@ export default class ProjectPreview extends React.Component {
   render() {
     return (
         <div className="container projectPreviewCard">
-          <div className="row">
-            <div className="col-xs-6 col-md-6 col-md-offset-3 col-xs-offset-3 center-text">
+          <div className="row projectPreviewHeader">
+            <div className="col-xs-10 col-sm-8 col-md-6 col-xs-offset-1 col-sm-offset-2 col-md-offset-3 center-text">
               <h1 className="">{this.props.name}</h1>
               <h4 className="">{this.props.subtitle}</h4>
             </div>
           </div>
           <div className="row">
-            <div className="col-xs-10 col-md-5 col-xs-offset-1">
+            <div className="col-xs-12 col-sm-10 col-md-4 col-xs-offset-0 col-sm-offset-1 col-md-offset-1">
               <img className="img-responsive img-rounded projectPreviewImage" src={`img/${this.props.image1}`}/>
             </div>
-            <div className="col-xs-10 col-md-5 col-xs-offset-1">
+            <div className="col-xs-12 col-sm-10 col-md-4 col-xs-offset-0 col-sm-offset-1 col-md-offset-1">
               <img className="img-responsive img-rounded projectPreviewImage" src={`img/${this.props.image2}`}/>
             </div>
           </div>
           <div className="row">
-            <div className="col-xs-6 col-md-6 col-md-offset-3 col-xs-offset-3 center-text">
+            <div className="col-xs-12 col-sm-10 col-md-6 col-xs-offset-0 col-sm-offset-1 col-md-offset-3 center-text">
               <p className="">{this.props.description}</p>
-              {/*<LinkContainer to={`/project/${this.props.id}`}>*/}
                 <a href={`${this.props.link}`}>
                   <Button className="">{this.props.button}</Button>
                 </a>
-              {/*</LinkContainer>*/}
             </div>
           </div>
         </div>
