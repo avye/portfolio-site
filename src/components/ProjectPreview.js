@@ -8,7 +8,7 @@ import { Button } from 'react-bootstrap';
 export default class ProjectPreview extends React.Component {
   render() {
     return (
-        <div className="container">
+        <div className="container projectPreviewCard">
           <div className="row">
             <div className="col-xs-6 col-md-6 col-md-offset-3 col-xs-offset-3 center-text">
               <h1 className="">{this.props.name}</h1>

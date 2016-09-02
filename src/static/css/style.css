@@ -11,8 +11,17 @@ p, div {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+/*Project Preview Classes*/
+.projectPreviewCard {
+  margin-bottom: 10%
+}
+
 .projectPreviewImage {
-  max-width: 250px
+  margin-bottom: 3%
+}
+
+.projectPreviewHeader {
+  margin-bottom: 3%
 }
 
 .opaque-navbar {
