@@ -9,7 +9,7 @@ export default class ContactPage extends React.Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-xs-6 col-md-6 col-md-offset-3 col-xs-offset-3">
+          <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2">
             <h2>Let's talk!</h2>
             <form>
               <FormGroup
