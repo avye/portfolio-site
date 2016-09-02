@@ -21,20 +21,23 @@ export default class NavBar extends React.Component {
 
   render() {
     return (
-      <Navbar staticBottom>
-        <Navbar.Header>
-          <Navbar.Brand>
-            <p>Copyright 2016 Andrew Vye</p>
-          </Navbar.Brand>
-        </Navbar.Header>
-        <Nav pullRight>
-          <NavItem eventKey={1} href="https://www.linkedin.com/in/andrewvye"><img src="/img/LinkedIn-25.png"></img></NavItem>
-          <NavItem eventKey={2} href="https://github.com/avye"><img src="/img/GitHub-25.png"></img></NavItem>
-          <LinkContainer to={{ pathname: 'contact' }}>
-            <NavItem eventKey={3}><img src="/img/Message-25.png"></img></NavItem>
-          </LinkContainer>
-        </Nav>
-      </Navbar>
+      <div className="container">
+        <div className="row">
+          <div className="col-xs-12 col-sm-12 col-md-12 text-center">
+            {/*<div className="text-center">*/}
+              <a href="https://www.linkedin.com/in/andrewvye">
+                <img src="/img/LinkedIn-25.png" className="" />
+              </a>
+              <a href="https://github.com/avye">
+                <img src="/img/GitHub-25.png" className="" />
+              </a>
+              <Link to="contact">
+                <img src="/img/Message-25.png" className="" />
+              </Link>
+            {/*</div>*/}
+          </div>
+        </div>
+      </div>
     );
   }
 }
