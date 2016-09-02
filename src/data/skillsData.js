@@ -71,28 +71,28 @@ const skillsData = {
       label: 'Webpack/Grunt'
     },
     {
-      y: 5,
-      label: 'Test Driven Development'
-    },
-    {
-      y: 6,
-      label: 'Continuous Integration'
-    },
-    {
-      y: 8,
-      label: 'Git'
-    },
-    {
       y: 8,
       label: 'ES6'
+    },
+    {
+      y: 7,
+      label: 'UI/UX'
+    },
+    {
+      y: 5,
+      label: 'Test Driven Development'
     },
     {
       y: 7,
       label: 'Deployment'
     },
     {
-      y: 7,
-      label: 'UI/UX'
+      y: 8,
+      label: 'Git'
+    },
+    {
+      y: 6,
+      label: 'Continuous Integration'
     },
   ]
 }
