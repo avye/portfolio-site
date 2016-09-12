@@ -23,19 +23,20 @@ export default class NavBar extends React.Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-xs-12 col-sm-12 col-md-12 text-center">
-          {/*Make each one of these their own div an dgive them just 1 spot in the grid then have them be responsive*/}
-            {/*<div className="text-center">*/}
-              <a href="https://www.linkedin.com/in/andrewvye">
-                <img src="/img/LinkedIn-25.png" className="" />
-              </a>
-              <a href="https://github.com/avye">
-                <img src="/img/GitHub-25.png" className="" />
-              </a>
-              <Link to="contact">
-                <img src="/img/Message-25.png" className="" />
-              </Link>
-            {/*</div>*/}
+          <div className="col-xs-1 col-sm-1 col-md-1 col-xs-offset-5 col-sm-offset-5 col-md-offset-5 text-center">
+            <a href="https://www.linkedin.com/in/andrewvye">
+              <img src="/img/LinkedIn-25.png" className="img-responsive" />
+            </a>
+          </div>
+          <div className="col-xs-1 col-sm-1 col-md-1 text-center">
+            <a href="https://github.com/avye">
+              <img src="/img/GitHub-25.png" className="img-responsive" />
+            </a>
+          </div>
+          <div className="col-xs-1 col-sm-1 col-md-1 text-center">
+            <Link to="contact">
+              <img src="/img/Message-25.png" className="img-responsive" />
+            </Link>
           </div>
         </div>
       </div>
