@@ -4,7 +4,7 @@
   "description": "Andrew's portfolio",
   "main": "src/server.js",
   "scripts": {
-    "postinstall": "npm build",
+    "postinstall": "npm run build",
     "start": "NODE_ENV=production node_modules/.bin/babel-node --presets 'react,es2015' src/server.js",
     "build": "NODE_ENV=production node_modules/.bin/webpack -p"
   },
