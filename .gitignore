@@ -9,3 +9,6 @@ src/static/js
 
 ## Babel ##
 babel_cache/
+
+## Auth ##
+src/authInfo.js
