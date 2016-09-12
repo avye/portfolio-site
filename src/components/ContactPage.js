@@ -1,17 +1,32 @@
 'use strict';
 
 import React from 'react';
+import ReactDOM from 'react-dom';
+import axios from 'axios';
 import { Link } from 'react-router';
 import { FormGroup, ControlLabel, FormControl, Button } from 'react-bootstrap';
 
 export default class ContactPage extends React.Component {
+  contactFormSubmit(event) {
+    event.preventDefault();
+    var test = ReactDOM.findDOMNode(contactName);
+    console.log('the test ', test);
+    console.log('heres the e ', event);
+    console.log('the refs ', this);
+    var message = {
+      contactName: 'test',
+      contactCompany: 'test2'
+    }
+    axios.post('/contactSubmit', message)
+  }
+
   render() {
     return (
       <div className="container">
         <div className="row">
           <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2">
             <h2>Let's talk!</h2>
-            <form>
+            <form onSubmit={this.contactFormSubmit.bind(this)}>
               <FormGroup
                 bsSize="large"
                 controlId="contactName"
@@ -20,6 +35,7 @@ export default class ContactPage extends React.Component {
                 <FormControl
                   type="text"
                   placeholder="What's your name?"
+                  ref="contactName"
                 />
               </FormGroup>
               <FormGroup

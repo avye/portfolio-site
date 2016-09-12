@@ -8,6 +8,9 @@ import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
 import routes from './routes';
 import NotFoundPage from './components/NotFoundPage';
+import nodemailer from 'nodemailer';
+
+import authInfo from './authInfo';
 
 const app = new Express();
 const server = new Server(app);
@@ -15,6 +18,11 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 app.use(Express.static(path.join(__dirname, 'static')));
+
+const smtpTransport = nodemailer.createTransport("SMTP",{
+    service: "Gmail",
+    auth: authInfo
+});
 
 app.get('*', (req, res) => {
   match(
@@ -41,6 +49,24 @@ app.get('*', (req, res) => {
     }
   );
 });
+
+app.post('/contactSubmit', (req, res) => {
+
+  const mailOptions={
+        to : authInfo.user,
+        subject : 'New contact request from ' req.body.contactName,
+        text : req.body.text
+  }
+  smtpTransport.sendMail(mailOptions, function(error, response){
+    if(error){
+      console.log(error);
+      res.end("error");
+    }else{
+      console.log("Message sent: " + response.message);
+      res.end("sent");
+    }
+  })
+})
 
 const port = process.env.PORT || 3000;
 const env = process.env.NODE_ENV || 'production';
