@@ -21,25 +21,25 @@ export default class AboutPage extends React.Component {
         </div>
         <div className="row">
           <div className="col-xs-12 col-sm-12 col-md-4 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 text-center">
-            <h4>Front-End Development</h4>
+            <h4><strong>Front-End Development</strong></h4>
             <VictoryPie
               data={skillsData.frontend}
             />
             <p></p>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-4 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 text-center">
-            <h4>Full Stack Development</h4>
+            <h4><strong>Full Stack Development</strong></h4>
             <VictoryPie
               data={skillsData.backend}
             />
             <p>TONS OF TEXT TONS OF TEXT TONS OF TEXT TONS OF TEXT TONS OF TEXT TONS OF TEXT TONS OF TEXT TONS OF TEXT TONS OF TEXT TONS OF TEXT TONS OF TEXT </p>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-4 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 text-center">
-            <h4>Best Practices</h4>
+            <h4><strong>Best Practices</strong></h4>
             <VictoryPie
               data={skillsData.general}
             />
-            <p>TONS OF TEXT TONS OF TEXT TONS OF TEXT TONS OF TEXT TONS OF TEXT TONS OF TEXT TONS OF TEXT TONS OF TEXT TONS OF TEXT TONS OF TEXT TONS OF TEXT </p>
+            <p>Every application is different and I take the time to fully understand your needs. From there, I can utilize industry best practices such as Test Driven Development and Continuous Integration to ensure that you have a robust product that leaves your users satisfied. Whether it is a responsive Single Page App or even a mobile application, you can know that I will do ensure your vision is wonderfully created.</p>
           </div>
           <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2">
 

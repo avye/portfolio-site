@@ -24,6 +24,7 @@ export default class NavBar extends React.Component {
       <div className="container">
         <div className="row">
           <div className="col-xs-12 col-sm-12 col-md-12 text-center">
+          {/*Make each one of these their own div an dgive them just 1 spot in the grid then have them be responsive*/}
             {/*<div className="text-center">*/}
               <a href="https://www.linkedin.com/in/andrewvye">
                 <img src="/img/LinkedIn-25.png" className="" />

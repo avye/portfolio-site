@@ -16,12 +16,15 @@ export default class ProjectPreview extends React.Component {
             </div>
           </div>
           <div className="row">
-            <div className="col-xs-12 col-sm-10 col-md-4 col-xs-offset-0 col-sm-offset-1 col-md-offset-1">
+            <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2">
+              <img className="img-responsive img-rounded projectPreviewImage" src={`img/${this.props.image2}`}/>
+            </div>
+            {/*<div className="col-xs-12 col-sm-10 col-md-4 col-xs-offset-0 col-sm-offset-1 col-md-offset-1">
               <img className="img-responsive img-rounded projectPreviewImage" src={`img/${this.props.image1}`}/>
             </div>
             <div className="col-xs-12 col-sm-10 col-md-4 col-xs-offset-0 col-sm-offset-1 col-md-offset-1">
               <img className="img-responsive img-rounded projectPreviewImage" src={`img/${this.props.image2}`}/>
-            </div>
+            </div>*/}
           </div>
           <div className="row">
             <div className="col-xs-12 col-sm-10 col-md-6 col-xs-offset-0 col-sm-offset-1 col-md-offset-3 center-text">
