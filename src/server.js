@@ -9,8 +9,12 @@ import { match, RouterContext } from 'react-router';
 import routes from './routes';
 import NotFoundPage from './components/NotFoundPage';
 import nodemailer from 'nodemailer';
+import authInfoLocal from './authInfo';
 
-import authInfo from './authInfo';
+// Handle the deployed version authorization information
+const authInfo = {};
+authInfo.user = process.env.authEmail || authInfoLocal.user
+authInfo.pass = process.env.authPassword || authInfoLocal.pass
 
 const app = new Express();
 const server = new Server(app);
