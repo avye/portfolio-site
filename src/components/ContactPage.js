@@ -7,17 +7,20 @@ import { Link } from 'react-router';
 import { FormGroup, ControlLabel, FormControl, Button } from 'react-bootstrap';
 
 export default class ContactPage extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+
   contactFormSubmit(event) {
     event.preventDefault();
-    var test = ReactDOM.findDOMNode(contactName);
-    console.log('the test ', test);
-    console.log('heres the e ', event);
-    console.log('the refs ', this);
-    var message = {
-      contactName: 'test',
-      contactCompany: 'test2'
+    const message = {
+      contactName: this.refs.contactFormName.value,
+      contactCompany: this.refs.contactCompany.value,
+      contactEmail: this.refs.contactEmail.value,
+      contactDescription: this.refs.contactDescription.value
     }
-    axios.post('/contactSubmit', message)
+    console.log(message);
+    axios.post('/contactSubmit', {data: message})
   }
 
   render() {
@@ -27,48 +30,22 @@ export default class ContactPage extends React.Component {
           <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2">
             <h2>Let's talk!</h2>
             <form onSubmit={this.contactFormSubmit.bind(this)}>
-              <FormGroup
-                bsSize="large"
-                controlId="contactName"
-              >
-                <ControlLabel>Name</ControlLabel>
-                <FormControl
-                  type="text"
-                  placeholder="What's your name?"
-                  ref="contactName"
-                />
-              </FormGroup>
-              <FormGroup
-                bsSize="large"
-                controlId="contactCompany"
-              >
-                <ControlLabel>Company</ControlLabel>
-                <FormControl
-                  type="text"
-                  placeholder="Who do you work for?"
-                />
-              </FormGroup>
-              <FormGroup
-                bsSize="large"
-                controlId="contactEmail"
-              >
-                <ControlLabel>Email</ControlLabel>
-                <FormControl
-                  type="email"
-                  placeholder="How can I reach you?"
-                />
-              </FormGroup>
-              <FormGroup
-                bsSize="large"
-                controlId="contactDescription"
-              >
-                <ControlLabel>How can I help?</ControlLabel>
-                <FormControl
-                  type="text"
-                  componentClass="textarea"
-                  placeholder="What can I do for you?"
-                />
-              </FormGroup>
+              <div className="form-group">
+                <label for="contactName">Name</label>
+                <input type="text" class="form-control" id="contactName" placeholder="What's your name?" ref='contactFormName'></input>
+              </div>
+              <div className="form-group">
+                <label for="contactCompany">Company</label>
+                <input type="text" class="form-control" id="contactCompany" placeholder="Who do you work for?" ref='contactCompany'></input>
+              </div>
+              <div className="form-group">
+                <label for="contactEmail">Email</label>
+                <input type="email" class="form-control" id="contactEmail" placeholder="How can I reach you?" ref='contactEmail'></input>
+              </div>
+              <div className="form-group">
+                <label for="contactDescription">How can I help?</label>
+                <input type="text" class="form-control" id="contactDescription" placeholder="What can I do for you?" ref='contactDescription'></input>
+              </div>
               <Button type="submit">
                 Submit
               </Button>
