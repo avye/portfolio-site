@@ -4,6 +4,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import { VictoryPie } from 'victory';
 import skillsData from '../data/skillsData';
+import Footer from './Footer';
 
 export default class AboutPage extends React.Component {
   render() {
@@ -12,7 +13,7 @@ export default class AboutPage extends React.Component {
       'React'
     ]
     return (
-      <div className="container">
+      <div className="container aboutPageContainer">
         <div className="row">
           <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2 text-center">
             <h2>I can build whatever you want.</h2>
@@ -44,6 +45,11 @@ export default class AboutPage extends React.Component {
 
           </div>
         </div>
+        <footer>
+          <div className="container">
+            <Footer />
+          </div>
+        </footer>
       </div>
     );
   }

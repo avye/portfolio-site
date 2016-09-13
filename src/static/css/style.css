@@ -11,6 +11,12 @@ p, div {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+/*About Page Classes*/
+.aboutPageContainer {
+  margin-bottom: 10%
+}
+
+
 /*Project Preview Classes*/
 .projectPreviewCard {
   margin-bottom: 10%

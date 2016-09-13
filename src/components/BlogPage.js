@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Link } from 'react-router';
+import Footer from './Footer';
 
 export default class BlogPage extends React.Component {
   render() {
@@ -11,6 +12,11 @@ export default class BlogPage extends React.Component {
         <p>
           <Link to="/">Go back to the main page</Link>
         </p>
+        <footer>
+          <div className="container">
+            <Footer />
+          </div>
+        </footer>
       </div>
     );
   }

@@ -15,9 +15,6 @@ export default class Layout extends React.Component {
           <NavBar />
         </header>
         <div>{this.props.children}</div>
-        <footer>
-          <Footer />
-        </footer>
       </div>
     );
   }

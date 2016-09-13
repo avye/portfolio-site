@@ -6,6 +6,7 @@ import WelcomeGreeting from './WelcomeGreeting';
 import projects from '../data/projects';
 import { Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+import Footer from './Footer';
 
 var Scroll = require('react-scroll');
 var Element = Scroll.Element;
@@ -31,10 +32,15 @@ export default class IndexPage extends React.Component {
           <WelcomeGreeting/>
         </div>
         <Element name="ScrollToPortfolio">
-          <div className="container text-center">
+          <div className="container">
             {projects.map(projectData => <ProjectPreview key={projectData.id} {...projectData} />)}
           </div>
         </Element>
+        <footer>
+          <div className="container">
+            <Footer />
+          </div>
+        </footer>
       </div>
     );
   }

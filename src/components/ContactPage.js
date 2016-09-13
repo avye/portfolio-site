@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import axios from 'axios';
 import { Link } from 'react-router';
 import { FormGroup, ControlLabel, FormControl, Button } from 'react-bootstrap';
+import Footer from './Footer';
 
 export default class ContactPage extends React.Component {
   contactFormSubmit(event) {
@@ -75,6 +76,11 @@ export default class ContactPage extends React.Component {
             </form>
           </div>
         </div>
+        <footer>
+          <div className="container">
+            <Footer />
+          </div>
+        </footer>
       </div>
     );
   }
