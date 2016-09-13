@@ -24,7 +24,7 @@ export default class NavBar extends React.Component {
       <div className="container">
         <div className="row">
           <div className="col-xs-2 col-sm-2 col-md-2 col-xs-offset-0 col-sm-offset-0 col-md-offset-0">
-            <p>Copyright 2016</p>
+            <p>Copyright {new Date().getFullYear()} &copy;</p>
           </div>
           {/*<div className="col-xs-2 col-sm-2 col-md-2 col-xs-offset-3 col-sm-offset-3 col-md-offset-3">
             <LinkContainer to={{ pathname: 'contact' }}>
