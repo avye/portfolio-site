@@ -29,8 +29,8 @@ app.get('/contactSubmit', (req, res) => {
   console.log('the query ', req.query);
   const mailOptions={
         to : authInfo.user,
-        subject : 'New contact request from ' + req.body.contactName,
-        text : req.body.text
+        subject : 'New contact request from ' + req.query.contactName + ' at ' + req.query.contactCompany,
+        text : 'Email me at ' + req.query.contactEmail + '\n' + req.query.contactDescription
   }
   smtpTransport.sendMail(mailOptions, function(error, response){
     if(error){
