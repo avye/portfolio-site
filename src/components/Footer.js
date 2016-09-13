@@ -22,23 +22,16 @@ export default class NavBar extends React.Component {
   render() {
     return (
       <div className="container">
-      {/*<div className="row">
-        <div className="col-xs-2 col-sm-2 col-md-2 col-xs-offset-5 col-sm-offset-5 col-md-offset-5">
-          <LinkContainer to={{ pathname: 'contact' }}>
-            <Button className="center-block">Contact</Button>
-          </LinkContainer>
-        </div>
-      </div>*/}
         <div className="row">
           <div className="col-xs-2 col-sm-2 col-md-2 col-xs-offset-0 col-sm-offset-0 col-md-offset-0">
             <p>Copyright 2016</p>
           </div>
-          <div className="col-xs-2 col-sm-2 col-md-2 col-xs-offset-3 col-sm-offset-3 col-md-offset-3">
+          {/*<div className="col-xs-2 col-sm-2 col-md-2 col-xs-offset-3 col-sm-offset-3 col-md-offset-3">
             <LinkContainer to={{ pathname: 'contact' }}>
               <Button className="center-block">Contact</Button>
             </LinkContainer>
-          </div>
-          <div className="col-xs-1 col-sm-1 col-md-1 col-xs-offset-3 col-sm-offset-3 col-md-offset-3">
+          </div>*/}
+          <div className="col-xs-1 col-sm-1 col-md-1 col-xs-offset-7 col-sm-offset-7 col-md-offset-7">
             <a href="https://www.linkedin.com/in/andrewvye">
               <img src="/img/LinkedIn-25.png" className="img-responsive center-block" />
             </a>
@@ -48,11 +41,11 @@ export default class NavBar extends React.Component {
               <img src="/img/GitHub-25.png" className="img-responsive center-block" />
             </a>
           </div>
-          {/*<div className="col-xs-1 col-sm-1 col-md-1 text-center">
+          <div className="col-xs-1 col-sm-1 col-md-1">
             <Link to="contact">
-              <img src="/img/Message-25.png" className="img-responsive" />
+              <img src="/img/Message-25.png" className="img-responsive center-block" />
             </Link>
-          </div>*/}
+          </div>
         </div>
       </div>
     );

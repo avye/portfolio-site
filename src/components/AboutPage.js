@@ -4,7 +4,6 @@ import React from 'react';
 import { Link } from 'react-router';
 import { VictoryPie } from 'victory';
 import skillsData from '../data/skillsData';
-import Footer from './Footer';
 
 export default class AboutPage extends React.Component {
   render() {
@@ -34,22 +33,14 @@ export default class AboutPage extends React.Component {
             />
             <p>Combining back-end tools such as Node.js/Express and databases such as MongoDB/SQL along with front-end frameworks such as React or Angular I can create a full-stack web application. Whether it is a responsive Single Page App or even an iOS/Android mobile application, you can know that I will do everything to ensure your vision is wonderfully created.</p>
           </div>
-          <div className="col-xs-12 col-sm-12 col-md-4 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 text-center">
+          <div className="col-xs-12 col-sm-12 col-md-4 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 text-center center-block">
             <h4><strong>Best Practices</strong></h4>
             <VictoryPie
               data={skillsData.general}
             />
             <p>Every application is different and I take the time to fully understand your needs. From there, I can utilize industry best practices such as Test Driven Development and Continuous Integration to ensure that you have a robust product that leaves your users satisfied.</p>
           </div>
-          <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2">
-
-          </div>
         </div>
-        <footer>
-          <div className="container">
-            <Footer />
-          </div>
-        </footer>
       </div>
     );
   }

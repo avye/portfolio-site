@@ -16,6 +16,16 @@ p, div {
   margin-bottom: 10%
 }
 
+/*Contact Page Classes*/
+.contactPageContainer {
+  margin-bottom: 10%
+}
+
+/*Blog Page Classes*/
+.blogPageContainer {
+  margin-bottom: 10%
+}
+
 
 /*Project Preview Classes*/
 .projectPreviewCard {
