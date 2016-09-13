@@ -32,7 +32,7 @@ export default class WelcomeGreeting extends React.Component {
             <h4 className="text-center">I'm a full stack software engineer.</h4>
             <h4 className="text-center">I enjoy playing in both mobile and web environments.</h4>
             <Button className="center-block" onClick={() => this.onWorkButtonClick()}>Check out Work</Button>
-            <hr width="1" size="500" className="verticalLine"></hr>
+            <hr className="verticalLine"></hr>
             {/*<div class="verticalLine"></div>*/}
             {/*<img src="" className="img-responsive center-block"/>*/}
           </div>

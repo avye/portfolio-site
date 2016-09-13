@@ -42,7 +42,7 @@ p, div {
 
 /*Welcome Greeting Classes*/
 .verticalLine{
-  height:100px; width:0px; position:relative; border-left:1px solid gray;
+  height:200px; width:0px; position:relative; border-left:1px solid gray;
 }
 
 /*Footer Classes*/
