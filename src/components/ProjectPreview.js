@@ -11,8 +11,8 @@ export default class ProjectPreview extends React.Component {
         <div className="container projectPreviewCard">
           <div className="row projectPreviewHeader">
             <div className="col-xs-10 col-sm-8 col-md-6 col-xs-offset-1 col-sm-offset-2 col-md-offset-3 center-text">
-              <h1 className="">{this.props.name}</h1>
-              <h4 className="">{this.props.subtitle}</h4>
+              <h1 className="text-center">{this.props.name}</h1>
+              <h4 className="text-center">{this.props.subtitle}</h4>
             </div>
           </div>
           <div className="row">
@@ -28,9 +28,9 @@ export default class ProjectPreview extends React.Component {
           </div>
           <div className="row">
             <div className="col-xs-12 col-sm-10 col-md-6 col-xs-offset-0 col-sm-offset-1 col-md-offset-3 center-text">
-              <p className="">{this.props.description}</p>
+              <p className="text-center">{this.props.description}</p>
                 <a href={`${this.props.link}`}>
-                  <Button className="">{this.props.button}</Button>
+                  <Button className="center-block">{this.props.button}</Button>
                 </a>
             </div>
           </div>
