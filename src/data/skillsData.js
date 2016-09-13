@@ -12,11 +12,11 @@ const skillsData = {
     },
     {
       y: 4,
-      label: 'HTML5'
+      label: 'Backbone'
     },
     {
       y: 2,
-      label: 'Backbone'
+      label: 'HTML5'
     },
     {
       y: 10,

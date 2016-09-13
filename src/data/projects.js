@@ -9,7 +9,7 @@ const projects = [
     image2: 'followthru2.png',
     link: 'https://vimeo.com/173844724',
     button: 'View Demo',
-    description: 'Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. '
+    description: 'An iPhone productivity application for quickly creating smart lists that help users follow through on completing added items by providing easy access to those items and next steps to complete the item.'
   },
   {
     id: 'savor',
@@ -19,17 +19,17 @@ const projects = [
     image2: 'savor2.png',
     link: 'https://savor-app.herokuapp.com/#/',
     button: 'View Site',
-    description: 'Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. '
+    description: 'Food journal web application for recording great meals and sharing them amongst friends.'
   },
   {
-    id: 'trex-timer',
-    name: 'Trex Timer',
+    id: 'trex-racer',
+    name: 'Trex Racer',
     subtitle: 'UI, FRONT-END DESIGN, BACK-END ARCHITECTURE',
     image1: 'trex-racer1.png',
     image2: 'trex-racer2.png',
     link: 'https://trex-timer.herokuapp.com/#/signin',
     button: 'View Site',
-    description: 'Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. Savor was an app I created to make cool stuff. '
+    description: 'Interactive timer with a fun multiplayer chat and game functionality.'
   }
 ];
 

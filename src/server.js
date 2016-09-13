@@ -54,7 +54,7 @@ app.post('/contactSubmit', (req, res) => {
 
   const mailOptions={
         to : authInfo.user,
-        subject : 'New contact request from ' req.body.contactName,
+        subject : 'New contact request from ' + req.body.contactName,
         text : req.body.text
   }
   smtpTransport.sendMail(mailOptions, function(error, response){
