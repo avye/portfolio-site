@@ -24,6 +24,24 @@ const smtpTransport = nodemailer.createTransport("SMTP",{
     auth: authInfo
 });
 
+// Want this to be handled different as it is the contact form submission
+app.get('/contactSubmit', (req, res) => {
+  console.log('the query ', req.query);
+  const mailOptions={
+        to : authInfo.user,
+        subject : 'New contact request from ' + req.body.contactName,
+        text : req.body.text
+  }
+  smtpTransport.sendMail(mailOptions, function(error, response){
+    if(error){
+      console.log(error);
+      res.end("error");
+    }else{
+      console.log("Message sent: " + response.message);
+      res.end("sent");
+    }
+  })
+})
 app.get('*', (req, res) => {
   match(
     { routes, location: req.url },
@@ -49,24 +67,6 @@ app.get('*', (req, res) => {
     }
   );
 });
-
-app.post('/contactSubmit', (req, res) => {
-
-  const mailOptions={
-        to : authInfo.user,
-        subject : 'New contact request from ' + req.body.contactName,
-        text : req.body.text
-  }
-  smtpTransport.sendMail(mailOptions, function(error, response){
-    if(error){
-      console.log(error);
-      res.end("error");
-    }else{
-      console.log("Message sent: " + response.message);
-      res.end("sent");
-    }
-  })
-})
 
 const port = process.env.PORT || 3000;
 const env = process.env.NODE_ENV || 'production';

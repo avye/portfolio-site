@@ -19,8 +19,15 @@ export default class ContactPage extends React.Component {
       contactEmail: this.refs.contactEmail.value,
       contactDescription: this.refs.contactDescription.value
     }
-    console.log(message);
-    axios.post('/contactSubmit', {data: message})
+    axios.get('/contactSubmit', {
+      params: message
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
   }
 
   render() {
