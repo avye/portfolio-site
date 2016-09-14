@@ -15,7 +15,7 @@ export default class AboutPage extends React.Component {
       <div className="container aboutPageContainer">
         <div className="row">
           <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2 text-center">
-            <h2>I can build whatever you want.</h2>
+            <h1>I can build whatever you want.</h1>
           </div>
         </div>
         <div className="row">

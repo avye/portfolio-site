@@ -40,6 +40,10 @@ p, div {
   margin-bottom: 3%
 }
 
+.projectPreviewCallout {
+  margin-top: 3%
+}
+
 /*Welcome Greeting Classes*/
 .verticalLine{
   height:200px; width:0px; position:relative; border-left:1px solid gray;
