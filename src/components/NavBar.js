@@ -31,7 +31,7 @@ export default class NavBar extends React.Component {
       </Navbar.Brand>
       <Navbar.Toggle />
     </Navbar.Header>
-    <MediaQuery query='(min-device-width: 1224px)'>
+    <MediaQuery minDeviceWidth={1224}>
     <Nav pullRight>
       <NavDropdown eventKey={1} title={
         <span><img src="/img/Menu-25.png"></img></span>
@@ -53,7 +53,7 @@ export default class NavBar extends React.Component {
       </Nav>
     </MediaQuery>
     {/*For phones/tablets*/}
-    <MediaQuery query='(max-device-width: 1224px)'>
+    <MediaQuery maxDeviceWidth={1224}>
     <Navbar.Collapse>
       <Nav pullRight>
       <LinkContainer to={{ pathname: '/', query: { work: 'work' } }}>
