@@ -44,6 +44,3 @@ export default class Footer extends React.Component {
     );
   }
 }
-//
-// <a href="https://www.linkedin.com/in/andrewvye">LinkedIn</a>
-// <a href="https://github.com/avye">GitHub</a>
