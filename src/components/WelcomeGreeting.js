@@ -1,8 +1,6 @@
 'use strict';
 
 import React from 'react';
-import { Link } from 'react-router';
-import { Button } from 'react-bootstrap';
 
 var Scroll = require('react-scroll');
 var Element = Scroll.Element;
@@ -31,7 +29,7 @@ export default class WelcomeGreeting extends React.Component {
             <h1 className="text-center"><strong>Welcome!</strong></h1>
             <h4 className="text-center">I'm a full stack software engineer.</h4>
             <h4 className="text-center">I enjoy playing in both mobile and web environments.</h4>
-            <Button className="center-block" onClick={() => this.onWorkButtonClick()}>CHECK OUT WORK</Button>
+            <button className="btn btn-default center-block" onClick={() => this.onWorkButtonClick()}>CHECK OUT WORK</button>
             <hr className="verticalLine"></hr>
             {/*<div class="verticalLine"></div>*/}
             {/*<img src="" className="img-responsive center-block"/>*/}

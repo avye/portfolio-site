@@ -2,8 +2,6 @@
 
 import React from 'react';
 import { Link } from 'react-router';
-import { LinkContainer } from 'react-router-bootstrap';
-import { Button } from 'react-bootstrap';
 
 export default class ProjectPreview extends React.Component {
   render() {
@@ -37,7 +35,7 @@ export default class ProjectPreview extends React.Component {
             <div className="col-xs-12 col-sm-10 col-md-6 col-xs-offset-0 col-sm-offset-1 col-md-offset-3 center-text">
               <p className="text-center">{this.props.description}</p>
                 <a href={`${this.props.link}`}>
-                  <Button className="center-block">{this.props.button}</Button>
+                  <button className="center-block">{this.props.button}</button>
                 </a>
             </div>
           </div>
@@ -51,9 +49,9 @@ export default class ProjectPreview extends React.Component {
               </div>
               <div className="row">
                 <div className="col-xs-6 col-sm-4 col-md-2 col-xs-offset-3 col-sm-offset-4 col-md-offset-5 center-text">
-                  <LinkContainer to={{ pathname: 'contact' }}>
-                    <Button className="center-block">CONTACT ME</Button>
-                  </LinkContainer>
+                  <Link to='contact'>
+                    <button className="btn btn-default center-block">CONTACT ME</button>
+                  </Link>
                 </div>
               </div>
             </div>

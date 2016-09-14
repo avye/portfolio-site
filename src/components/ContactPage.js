@@ -4,7 +4,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import { Link } from 'react-router';
-import { FormGroup, ControlLabel, FormControl, Button } from 'react-bootstrap';
 
 export default class ContactPage extends React.Component {
   constructor(props) {
@@ -66,9 +65,7 @@ export default class ContactPage extends React.Component {
             </div>
             <div className="form-group">
               <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2">
-                <Button type="submit">
-                  Submit
-                </Button>
+                <button type="submit">Submit</button>
               </div>
             </div>
           </form>

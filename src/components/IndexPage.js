@@ -4,8 +4,6 @@ import React from 'react';
 import ProjectPreview from './ProjectPreview';
 import WelcomeGreeting from './WelcomeGreeting';
 import projects from '../data/projects';
-import { Button } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
 
 var Scroll = require('react-scroll');
 var Element = Scroll.Element;
