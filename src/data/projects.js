@@ -15,7 +15,7 @@ const projects = [
   {
     id: 'savor',
     name: 'Savor',
-    subtitle: 'BACK-END STRUCTURE, AUTHENTICATION, DEPLOYMENT',
+    subtitle: 'BACK-END STRUCTURE, AUTHENTICATION, DEPLOYMENT, UI',
     image1: 'savor1.png',
     image2: 'savor2.png',
     link: 'https://savor-app.herokuapp.com/#/',
