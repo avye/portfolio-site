@@ -26,13 +26,10 @@ export default class WelcomeGreeting extends React.Component {
         </div>
         <div className="row">
           <div className="col-xs-12 col-sm-10 col-md-6 col-xs-offset-0 col-sm-offset-1 col-md-offset-3 center-text">
-            <h1 className="text-center"><strong>Welcome!</strong></h1>
-            <h4 className="text-center">I'm a full stack software engineer.</h4>
-            <h4 className="text-center">I enjoy playing in both mobile and web environments.</h4>
+            <h1 className="text-center"><big><strong>Welcome!</strong></big></h1>
+            <h4 className="text-center">As a full-stack software engineer, I help companies delight their users with wonderful websites and mobile applications that are intuitive and a joy to use.</h4>
             <button className="btn btn-default center-block" onClick={() => this.onWorkButtonClick()}>CHECK OUT WORK</button>
             <hr className="verticalLine"></hr>
-            {/*<div class="verticalLine"></div>*/}
-            {/*<img src="" className="img-responsive center-block"/>*/}
           </div>
         </div>
 
