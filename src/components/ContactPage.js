@@ -59,7 +59,7 @@ export default class ContactPage extends React.Component {
             <div className="form-group">
               <label for="contactDescription" className="col-xs-10 col-sm-10 col-md-10 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 control-label">Description</label>
               <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2">
-                <textarea className="form-control" id="contactDescription" placeholder="How can I help?" ref='contactDescription'></textarea>
+                <textarea className="form-control" id="contactDescription" placeholder="How can I help?" ref='contactDescription' rows="3"></textarea>
               </div>
             </div>
             <div className="form-group">

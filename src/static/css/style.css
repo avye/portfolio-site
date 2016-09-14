@@ -21,12 +21,6 @@ p, div {
   margin-bottom: 10%
 }
 
-textarea {
-  -webkit-appearance: textfield;
-  -moz-appearance: textfield;
-  appearance: textfield;
-}
-
 /*Blog Page Classes*/
 .blogPageContainer {
   margin-bottom: 10%
