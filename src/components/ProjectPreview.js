@@ -46,7 +46,7 @@ export default class ProjectPreview extends React.Component {
             <div>
               <div className="row projectPreviewCallout">
                 <div className="col-xs-12 col-sm-12 col-md-12 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 center-text">
-                  <h1 className="text-center">Sound interesting?</h1>
+                  <h1 className="text-center"><strong><big><big><big>Interested?</big></big></big></strong></h1>
                 </div>
               </div>
               <div className="row">
