@@ -37,30 +37,29 @@ export default class ContactPage extends React.Component {
             <h2>Let's talk!</h2>
           </div>
         </div>
-        <div className="row">
           <form onSubmit={this.contactFormSubmit.bind(this)} class="form-horizontal">
             <div className="form-group">
-              <label for="contactName" className="col-xs-10 col-sm-10 col-md-10 col-xs-offset-2 col-sm-offset-2 col-md-offset-2">Name</label>
+              <label for="contactName" className="col-xs-10 col-sm-10 col-md-10 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 control-label">Name</label>
               <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2">
-                <input type="text" class="form-control" id="contactName" placeholder="What's your name?" ref='contactFormName'></input>
+                <input type="text" className="form-control" id="contactName" placeholder="What's your name?" ref='contactFormName'></input>
               </div>
             </div>
             <div className="form-group">
-              <label for="contactCompany" className="col-xs-10 col-sm-10 col-md-10 col-xs-offset-2 col-sm-offset-2 col-md-offset-2">Company</label>
+              <label for="contactCompany" className="col-xs-10 col-sm-10 col-md-10 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 control-label">Company</label>
               <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2">
-                <input type="text" class="form-control" id="contactCompany" placeholder="Who do you work for?" ref='contactCompany'></input>
+                <input type="text" className="form-control" id="contactCompany" placeholder="Who do you work for?" ref='contactCompany'></input>
               </div>
             </div>
             <div className="form-group">
-              <label for="contactEmail" className="col-xs-10 col-sm-10 col-md-10 col-xs-offset-2 col-sm-offset-2 col-md-offset-2">Email</label>
+              <label for="contactEmail" className="col-xs-10 col-sm-10 col-md-10 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 control-label">Email</label>
               <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2">
-                <input type="email" class="form-control" id="contactEmail" placeholder="How can I reach you?" ref='contactEmail'></input>
+                <input type="email" className="form-control" id="contactEmail" placeholder="How can I reach you?" ref='contactEmail'></input>
               </div>
             </div>
             <div className="form-group">
-              <label for="contactDescription" className="col-xs-10 col-sm-10 col-md-10 col-xs-offset-2 col-sm-offset-2 col-md-offset-2">Description</label>
+              <label for="contactDescription" className="col-xs-10 col-sm-10 col-md-10 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 control-label">Description</label>
               <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2">
-                <textarea class="form-control" id="contactDescription" placeholder="How can I help?" ref='contactDescription'></textarea>
+                <textarea className="form-control" id="contactDescription" placeholder="How can I help?" ref='contactDescription'></textarea>
               </div>
             </div>
             <div className="form-group">
@@ -69,7 +68,6 @@ export default class ContactPage extends React.Component {
               </div>
             </div>
           </form>
-        </div>
       </div>
     );
   }
