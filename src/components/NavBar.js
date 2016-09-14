@@ -32,44 +32,44 @@ export default class NavBar extends React.Component {
       <Navbar.Toggle />
     </Navbar.Header>
     <MediaQuery minDeviceWidth={1224}>
-    <Nav pullRight>
-      <NavDropdown eventKey={1} title={
-        <span><img src="/img/Menu-25.png"></img></span>
-       } id="basic-nav-dropdown" noCaret>
-        <LinkContainer to={{ pathname: '/', query: { work: 'work' } }}>
-          <MenuItem eventKey={1.1} onClick={() => this.onWorkButtonClick()}>Work</MenuItem>
-        </LinkContainer>
-        <LinkContainer to={{ pathname: 'blog' }}>
-          <MenuItem eventKey={1.2}>Blog</MenuItem>
-        </LinkContainer>
-        <LinkContainer to={{ pathname: 'about' }}>
-          <MenuItem eventKey={1.3}>About</MenuItem>
-        </LinkContainer>
-        <MenuItem divider />
-        <LinkContainer to={{ pathname: 'contact' }}>
-          <MenuItem eventKey={1.3} >Contact</MenuItem>
-        </LinkContainer>
-      </NavDropdown>
+      <Nav pullRight>
+        <NavDropdown eventKey={1} title={
+          <span><img src="/img/Menu-25.png"></img></span>
+         } id="basic-nav-dropdown" noCaret>
+          <LinkContainer to={{ pathname: '/', query: { work: 'work' } }}>
+            <MenuItem eventKey={1.1} onClick={() => this.onWorkButtonClick()}>Work</MenuItem>
+          </LinkContainer>
+          <LinkContainer to={{ pathname: 'blog' }}>
+            <MenuItem eventKey={1.2}>Blog</MenuItem>
+          </LinkContainer>
+          <LinkContainer to={{ pathname: 'about' }}>
+            <MenuItem eventKey={1.3}>About</MenuItem>
+          </LinkContainer>
+          <MenuItem divider />
+          <LinkContainer to={{ pathname: 'contact' }}>
+            <MenuItem eventKey={1.3} >Contact</MenuItem>
+          </LinkContainer>
+        </NavDropdown>
       </Nav>
     </MediaQuery>
     {/*For phones/tablets*/}
     <MediaQuery maxDeviceWidth={1224}>
-    <Navbar.Collapse>
-      <Nav pullRight>
-      <LinkContainer to={{ pathname: '/', query: { work: 'work' } }}>
-        <NavItem eventKey={1.1} onClick={() => this.onWorkButtonClick()}>Work</NavItem>
-      </LinkContainer>
-      <LinkContainer to={{ pathname: 'blog' }}>
-        <NavItem eventKey={1.2}>Blog</NavItem>
-      </LinkContainer>
-      <LinkContainer to={{ pathname: 'about' }}>
-        <NavItem eventKey={1.3}>About</NavItem>
-      </LinkContainer>
-      <LinkContainer to={{ pathname: 'contact' }}>
-        <NavItem eventKey={1.3} >Contact</NavItem>
-      </LinkContainer>
-      </Nav>
-    </Navbar.Collapse>
+      <Navbar.Collapse>
+        <Nav pullRight>
+        <LinkContainer to={{ pathname: '/', query: { work: 'work' } }}>
+          <NavItem eventKey={1.1} onClick={() => this.onWorkButtonClick()}>Work</NavItem>
+        </LinkContainer>
+        <LinkContainer to={{ pathname: 'blog' }}>
+          <NavItem eventKey={1.2}>Blog</NavItem>
+        </LinkContainer>
+        <LinkContainer to={{ pathname: 'about' }}>
+          <NavItem eventKey={1.3}>About</NavItem>
+        </LinkContainer>
+        <LinkContainer to={{ pathname: 'contact' }}>
+          <NavItem eventKey={1.3} >Contact</NavItem>
+        </LinkContainer>
+        </Nav>
+      </Navbar.Collapse>
     </MediaQuery>
   </Navbar>
     );

@@ -21,20 +21,20 @@ export default class Footer extends React.Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-xs-2 col-sm-2 col-md-2 col-xs-offset-0 col-sm-offset-0 col-md-offset-0">
+          <div className="col-xs-4 col-sm-3 col-md-2 col-xs-offset-0 col-sm-offset-0 col-md-offset-0">
             <p>Copyright {new Date().getFullYear()} &copy;</p>
           </div>
-          <div className="col-xs-1 col-sm-1 col-md-1 col-xs-offset-7 col-sm-offset-7 col-md-offset-7">
+          <div className="col-xs-2 col-sm-1 col-md-1 col-xs-offset-2 col-sm-offset-6 col-md-offset-7">
             <a href="https://www.linkedin.com/in/andrewvye">
               <img src="/img/LinkedIn-25.png" className="img-responsive center-block" />
             </a>
           </div>
-          <div className="col-xs-1 col-sm-1 col-md-1">
+          <div className="col-xs-2 col-sm-1 col-md-1">
             <a href="https://github.com/avye">
               <img src="/img/GitHub-25.png" className="img-responsive center-block" />
             </a>
           </div>
-          <div className="col-xs-1 col-sm-1 col-md-1">
+          <div className="col-xs-2 col-sm-1 col-md-1">
             <Link to="contact">
               <img src="/img/Message-25.png" className="img-responsive center-block" />
             </Link>
