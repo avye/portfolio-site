@@ -38,7 +38,7 @@ const skillsData = {
   backend: [
     {
       y: 14,
-      label: 'Node'
+      label: 'Socket.IO'
     },
     {
       y: 14,
@@ -58,7 +58,7 @@ const skillsData = {
     },
     {
       y: 5,
-      label: 'Socket.IO'
+      label: 'Node'
     },
     {
       y: 10,

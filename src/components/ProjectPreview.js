@@ -9,13 +9,13 @@ export default class ProjectPreview extends React.Component {
         <div className="container projectPreviewCard">
           <div className="row projectPreviewHeader">
             <div className="col-xs-10 col-sm-8 col-md-6 col-xs-offset-1 col-sm-offset-2 col-md-offset-3 center-text">
-              <h1 className="text-center"><strong>{this.props.name}</strong></h1>
+              <h1 className="text-center"><b>{this.props.name}</b></h1>
               <h4 className="text-center">{this.props.subtitle}</h4>
             </div>
           </div>
           <div className="row">
             {this.props.name === "followthru" ?
-              <div className="col-xs-12 col-sm-10 col-md-6 col-xs-offset-0 col-sm-offset-1 col-md-offset-3">
+              <div className="col-xs-10 col-sm-8 col-md-6 col-xs-offset-1 col-sm-offset-2 col-md-offset-3">
                 <img className="img-responsive img-rounded projectPreviewImage" src={`img/${this.props.image2}`}/>
               </div>
               :
@@ -33,7 +33,8 @@ export default class ProjectPreview extends React.Component {
           </div>
           <div className="row">
             <div className="col-xs-12 col-sm-10 col-md-6 col-xs-offset-0 col-sm-offset-1 col-md-offset-3 center-text">
-              <p className="text-center">{this.props.description}</p>
+              <p className="text-center"><i>Built with {this.props.technologies}</i></p>
+              <h4 className="text-center">{this.props.description}</h4>
                 <a href={`${this.props.link}`}>
                   <button className="btn btn-default center-block">{this.props.button}</button>
                 </a>
@@ -44,13 +45,13 @@ export default class ProjectPreview extends React.Component {
             <div>
               <div className="row projectPreviewCallout">
                 <div className="col-xs-12 col-sm-12 col-md-12 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 center-text">
-                  <h1 className="text-center"><strong><big><big><big>Interested?</big></big></big></strong></h1>
+                  <h1 className="text-center"><b><big><big><big>Interested?</big></big></big></b></h1>
                 </div>
               </div>
               <div className="row">
                 <div className="col-xs-6 col-sm-4 col-md-2 col-xs-offset-3 col-sm-offset-4 col-md-offset-5 center-text">
                   <Link to='contact'>
-                    <button className="btn btn-default center-block">CONTACT ME</button>
+                    <button className="btn btn-default btn-lg center-block">CONTACT ME</button>
                   </Link>
                 </div>
               </div>

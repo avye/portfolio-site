@@ -65,7 +65,7 @@ export default class ContactPage extends React.Component {
             </div>
             <div className="form-group">
               <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2">
-                <button type="submit">Submit</button>
+                <button type="submit" className="btn btn-default">Submit</button>
               </div>
             </div>
           </form>
