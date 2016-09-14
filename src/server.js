@@ -23,10 +23,10 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use(Express.static(path.join(__dirname, 'static')));
 
-const smtpTransport = nodemailer.createTransport("SMTP",{
-    service: "Gmail",
-    auth: authInfo
-});
+// const smtpTransport = nodemailer.createTransport("SMTP",{
+//     service: "Gmail",
+//     auth: authInfo
+// });
 
 // Want this to be handled different as it is the contact form submission
 // app.get('/contactSubmit', (req, res) => {
