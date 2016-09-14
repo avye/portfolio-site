@@ -8,13 +8,13 @@ import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
 import routes from './routes';
 import NotFoundPage from './components/NotFoundPage';
-import nodemailer from 'nodemailer';
-import authInfoLocal from './authInfo';
+// import nodemailer from 'nodemailer';
+// import authInfoLocal from './authInfo';
 
 // Handle the deployed version authorization information
-const authInfo = {};
-authInfo.user = process.env.authEmail || authInfoLocal.user
-authInfo.pass = process.env.authPassword || authInfoLocal.pass
+// const authInfo = {};
+// authInfo.user = process.env.authEmail || authInfoLocal.user
+// authInfo.pass = process.env.authPassword || authInfoLocal.pass
 
 const app = new Express();
 const server = new Server(app);
@@ -29,23 +29,23 @@ const smtpTransport = nodemailer.createTransport("SMTP",{
 });
 
 // Want this to be handled different as it is the contact form submission
-app.get('/contactSubmit', (req, res) => {
-  console.log('the query ', req.query);
-  const mailOptions={
-        to : authInfo.user,
-        subject : 'New contact request from ' + req.query.contactName + ' at ' + req.query.contactCompany,
-        text : 'Email me at ' + req.query.contactEmail + '\n' + req.query.contactDescription
-  }
-  smtpTransport.sendMail(mailOptions, function(error, response){
-    if(error){
-      console.log(error);
-      res.end("error");
-    }else{
-      console.log("Message sent: " + response.message);
-      res.end("sent");
-    }
-  })
-})
+// app.get('/contactSubmit', (req, res) => {
+//   console.log('the query ', req.query);
+//   const mailOptions={
+//         to : authInfo.user,
+//         subject : 'New contact request from ' + req.query.contactName + ' at ' + req.query.contactCompany,
+//         text : 'Email me at ' + req.query.contactEmail + '\n' + req.query.contactDescription
+//   }
+//   smtpTransport.sendMail(mailOptions, function(error, response){
+//     if(error){
+//       console.log(error);
+//       res.end("error");
+//     }else{
+//       console.log("Message sent: " + response.message);
+//       res.end("sent");
+//     }
+//   })
+// })
 app.get('*', (req, res) => {
   match(
     { routes, location: req.url },
