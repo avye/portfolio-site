@@ -50,7 +50,7 @@ export default class ProjectPreview extends React.Component {
                 </div>
               </div>
               <div className="row">
-                <div className="col-xs-6 col-sm-4 col-md-2 col-xs-offset-3 col-sm-offset-4 col-md-offset-5 center-text">
+                <div className="col-xs-12 col-sm-10 col-md-6 col-xs-offset-0 col-sm-offset-1 col-md-offset-3 center-text">
                   <Link to='contact'>
                     <button className="btn btn-default btn-lg center-block">CONTACT ME</button>
                   </Link>

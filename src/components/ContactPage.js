@@ -56,37 +56,37 @@ export default class ContactPage extends React.Component {
     return (
       <div className="container contactPageContainer">
         <div className="row">
-          <div className="col-xs-10 col-sm-10 col-md-10 col-xs-offset-2 col-sm-offset-2 col-md-offset-2">
-            <h1><big><b>Let's talk!</b></big></h1>
+          <div className="col-xs-12 col-sm-12 col-md-12 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 center-text">
+            <h1 className="text-center"><big><b>Let's talk!</b></big></h1>
           </div>
         </div>
           <form onSubmit={this.contactFormSubmit.bind(this)} class="form-horizontal">
             <div className="form-group">
-              <label for="contactName" className="col-xs-10 col-sm-10 col-md-10 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 control-label">Name</label>
-              <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2">
+              <label for="contactName" className="col-xs-12 col-sm-11 col-md-10 col-xs-offset-0 col-sm-offset-1 col-md-offset-2 control-label">Name</label>
+              <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2">
                 <input type="text" className="inputForm input-lg form-control" id="contactName" placeholder="What's your name?" ref='contactFormName'></input>
               </div>
             </div>
             <div className="form-group">
-              <label for="contactCompany" className="col-xs-10 col-sm-10 col-md-10 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 control-label">Company</label>
-              <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2">
+              <label for="contactCompany" className="col-xs-12 col-sm-11 col-md-10 col-xs-offset-0 col-sm-offset-1 col-md-offset-2 control-label">Company</label>
+              <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2">
                 <input type="text" className=" inputForm form-control input-lg" id="contactCompany" placeholder="Who do you work for?" ref='contactCompany'></input>
               </div>
             </div>
             <div className="form-group">
-              <label for="contactEmail" className="col-xs-10 col-sm-10 col-md-10 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 control-label">Email</label>
-              <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2">
+              <label for="contactEmail" className="col-xs-12 col-sm-11 col-md-10 col-xs-offset-0 col-sm-offset-1 col-md-offset-2 control-label">Email</label>
+              <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2">
                 <input type="email" className="inputForm input-lg form-control" id="contactEmail" placeholder="How can I reach you?" ref='contactEmail'></input>
               </div>
             </div>
             <div className="form-group">
-              <label for="contactDescription" className="col-xs-10 col-sm-10 col-md-10 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 control-label">Description</label>
-              <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2">
+              <label for="contactDescription" className="col-xs-12 col-sm-11 col-md-10 col-xs-offset-0 col-sm-offset-1 col-md-offset-2 control-label">Description</label>
+              <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2">
                 <textarea className="inputForm input-lg form-control" id="contactDescription" placeholder="How can I help?" ref='contactDescription'></textarea>
               </div>
             </div>
             <div className="form-group">
-              <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2">
+              <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2">
                 <Button type="submit" className={ submitButtonStyle } disabled={ isLoading }>{ buttonText }</Button>
               </div>
             </div>
