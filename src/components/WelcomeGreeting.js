@@ -32,7 +32,6 @@ export default class WelcomeGreeting extends React.Component {
             <hr className="verticalLine"></hr>
           </div>
         </div>
-
       </div>
     );
   }
