@@ -34,7 +34,7 @@ export default class ContactPage extends React.Component {
       <div className="container contactPageContainer">
         <div className="row">
           <div className="col-xs-10 col-sm-10 col-md-10 col-xs-offset-2 col-sm-offset-2 col-md-offset-2">
-            <h2>Let's talk!</h2>
+            <h1><big><b>Let's talk!</b></big></h1>
           </div>
         </div>
           <form onSubmit={this.contactFormSubmit.bind(this)} class="form-horizontal">
