@@ -4,14 +4,25 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import { Link } from 'react-router';
+import { Button } from 'react-bootstrap';
 
 export default class ContactPage extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
+    this.state = {
+      isLoading: false,
+      buttonText: 'Send',
+      submitButtonStyle: 'btn btn-default'
+    };
   }
 
   contactFormSubmit(event) {
     event.preventDefault();
+    const that = this;
+    this.setState({
+      isLoading: true,
+      buttonText: 'Sending...'
+    })
     const message = {
       contactName: this.refs.contactFormName.value,
       contactCompany: this.refs.contactCompany.value,
@@ -22,14 +33,26 @@ export default class ContactPage extends React.Component {
       params: message
     })
     .then(function (response) {
-      console.log(response);
+      // Use the variable that to be able to access the previous context
+      that.setState({
+        isLoading: true,
+        buttonText: 'SENT'
+      })
     })
     .catch(function (error) {
       console.log(error);
+      that.setState({
+        buttonText: 'Error',
+        submitButtonStyle: 'btn btn-danger'
+      })
     });
   }
 
   render() {
+    let isLoading = this.state.isLoading;
+    let buttonText = this.state.buttonText;
+    let submitButtonStyle = this.state.submitButtonStyle
+
     return (
       <div className="container contactPageContainer">
         <div className="row">
@@ -64,7 +87,7 @@ export default class ContactPage extends React.Component {
             </div>
             <div className="form-group">
               <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2">
-                <button type="submit" className="btn btn-default">Submit</button>
+                <Button type="submit" className={ submitButtonStyle } disabled={ isLoading }>{ buttonText }</Button>
               </div>
             </div>
           </form>
