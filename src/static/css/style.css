@@ -57,10 +57,7 @@ p, div {
   margin-bottom: 3%
 }
 
-.opaque-navbar {
-    background-color: rgba(0,0,0,0.5);
-  /* Transparent = rgba(0,0,0,0) / Translucent = (0,0,0,0.5)  */
-    height: 60px;
-    border-bottom: 0px;
-    transition: background-color .5s ease 0s;
+/*NavBar Classes*/
+.contactHighlight {
+  color: rgb(36,204,173)
 }

@@ -16,6 +16,7 @@ export default class AboutPage extends React.Component {
         <div className="row">
           <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2 text-center">
             <h1>I can build whatever you want.</h1>
+            <h4>I have hiked the Pacific Crest Trail, I have traveled throughout the world, and I have found what I love doing.  I hope to share that with you.</h4>
           </div>
         </div>
         <div className="row">

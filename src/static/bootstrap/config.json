@@ -63,9 +63,9 @@
     "@table-bg-active": "@table-bg-hover",
     "@table-border-color": "#ddd",
     "@btn-font-weight": "normal",
-    "@btn-default-color": "#333",
-    "@btn-default-bg": "#fff",
-    "@btn-default-border": "#ccc",
+    "@btn-default-color": "#FFFFFF",
+    "@btn-default-bg": "#24CCAD",
+    "@btn-default-border": "#24CCAD",
     "@btn-primary-color": "#fff",
     "@btn-primary-bg": "@brand-primary",
     "@btn-primary-border": "darken(@btn-primary-bg, 5%)",
@@ -133,7 +133,7 @@
     "@grid-columns": "12",
     "@grid-gutter-width": "30px",
     "@grid-float-breakpoint": "@screen-lg-min",
-    "@grid-float-breakpoint-max": "(@grid-float-breakpoint - 1)",
+    "@grid-float-breakpoint-max": "@grid-float-breakpoint",
     "@container-tablet": "(720px + @grid-gutter-width)",
     "@container-sm": "@container-tablet",
     "@container-desktop": "(940px + @grid-gutter-width)",
@@ -431,5 +431,5 @@
     "scrollspy.js",
     "transition.js"
   ],
-  "customizerUrl": "https://getbootstrap.com/customize/?id=183ae5f4f11af6ed081ec3485c1e456d"
+  "customizerUrl": "https://getbootstrap.com/customize/?id=ad19ce802328cea59673229db0d38dd3"
 }

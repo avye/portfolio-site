@@ -31,7 +31,7 @@ export default class NavBar extends React.Component {
       </Navbar.Brand>
       <Navbar.Toggle />
     </Navbar.Header>
-    <MediaQuery minDeviceWidth={800}>
+    <MediaQuery minDeviceWidth={1200}>
       <Nav pullRight>
         <NavDropdown eventKey={1} title={
           <span><img src="/img/Menu.svg"></img></span>
@@ -47,7 +47,7 @@ export default class NavBar extends React.Component {
           </LinkContainer>
           <MenuItem divider />
           <LinkContainer to={{ pathname: 'contact' }}>
-            <MenuItem eventKey={1.3} >Contact</MenuItem>
+            <MenuItem eventKey={1.3} ><p className="contactHighlight">CONTACT</p></MenuItem>
           </LinkContainer>
         </NavDropdown>
       </Nav>
