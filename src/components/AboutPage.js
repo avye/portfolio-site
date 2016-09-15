@@ -20,11 +20,11 @@ export default class AboutPage extends React.Component {
         </div>
         <div className="row">
           <div className="col-xs-12 col-sm-12 col-md-12 col-xs-offset-0 col-sm-offset-0 col-md-offset-0">
-            <VictoryChart>
+            <VictoryChart height={250}>
               <VictoryAxis
                 tickValues={[
-                  "React",
                   "Redux",
+                  "React",
                   "Angular",
                   "React Native",
                   "Node",
@@ -32,8 +32,8 @@ export default class AboutPage extends React.Component {
                   "MongoDB",
                   "MySQL",
                   "Socket.IO",
-                  "Webpack/Grunt",
                   "UI/UX",
+                  "Webpack/Grunt",
                 ]}
                 style={{
                   tickLabels: {
@@ -59,8 +59,8 @@ export default class AboutPage extends React.Component {
               />
               <VictoryBar
                 data={[
-                  {x: 1, y: 4},
-                  {x: 2, y: 3},
+                  {x: 1, y: 3},
+                  {x: 2, y: 4},
                   {x: 3, y: 3},
                   {x: 4, y: 3},
                   {x: 5, y: 4},
@@ -84,9 +84,21 @@ export default class AboutPage extends React.Component {
           </div>
         </div>
         <div className="row">
-          <div className="col-xs-12 col-sm-12 col-md-4 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 text-center">
-            <p>Always staying current with industry trends, I have worked with many of the popular front-end MVC frameworks such as React and Angular to create highly functional applications. Additionally I have developed both RESTful applications as well as ones that utilize Websockets. Whether it is utilizing popular APIs such as Yelp to create an immersive experience, or just wanting a well designed site, I can handle it.</p>
-
+          <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2 text-center">
+            <h4>Always staying current with industry trends, I have worked with many of the popular front-end MVC frameworks such as React and Angular to create highly functional applications. Additionally I have developed both RESTful applications as well as ones that utilize Websockets. Whether it is utilizing popular APIs such as Yelp to create an immersive experience, or just wanting a well designed site, I can handle it.</h4>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-xs-12 col-sm-12 col-md-12 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 center-text">
+            <hr className="verticalLine"></hr>
+            <h1 className="text-center"><b><big><big><big><big>Let's talk.</big></big></big></big></b></h1>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-xs-6 col-sm-4 col-md-2 col-xs-offset-3 col-sm-offset-4 col-md-offset-5 center-text">
+            <Link to='contact'>
+              <button className="btn btn-default btn-lg center-block">CONTACT ME</button>
+            </Link>
           </div>
         </div>
 
