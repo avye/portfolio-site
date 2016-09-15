@@ -27,8 +27,8 @@ export default class WelcomeGreeting extends React.Component {
         <div className="row">
           <div className="col-xs-12 col-sm-10 col-md-6 col-xs-offset-0 col-sm-offset-1 col-md-offset-3 center-text">
             <h1 className="text-center"><big><strong>Welcome!</strong></big></h1>
-            <h4 className="text-center">My name is Andrew Vye, and as a full-stack software engineer, I strive to delight my customers with wonderful websites and mobile applications that are intuitive and a joy to use.</h4>
-            <button className="btn btn-default center-block" onClick={() => this.onWorkButtonClick()}>CHECK OUT WORK</button>
+            <h4 className="text-center">My name is Andrew Vye, and as a full-stack software engineer I strive to delight my customers with wonderful websites and mobile applications that are intuitive and a joy to use.</h4>
+            <button className="btn btn-default center-block" onClick={() => this.onWorkButtonClick()}>SEE MY WORK</button>
             <hr className="verticalLine"></hr>
           </div>
         </div>

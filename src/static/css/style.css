@@ -11,6 +11,9 @@ p, div {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+.welcomeGreetingSpacing {
+  margin-top: 7%
+}
 /*About Page Classes*/
 .aboutPageContainer {
   margin-bottom: 3%
