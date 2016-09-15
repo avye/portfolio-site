@@ -16,7 +16,7 @@ export default class NotFoundPage extends React.Component {
         <div className="row">
           <div className="col-xs-12 col-sm-10 col-md-6 col-xs-offset-0 col-sm-offset-1 col-md-offset-3 center-text">
             <Link style={{'text-decoration': 'none'}} to='/'>
-              <button className="btn btn-default btn-lg center-block">GO HOME</button>
+              <button className="btn btn-default btn-lg center-block hvr-pop">GO HOME</button>
             </Link>
           </div>
         </div>

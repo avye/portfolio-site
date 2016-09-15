@@ -36,7 +36,7 @@ export default class ProjectPreview extends React.Component {
               <p className="text-center"><i>Built with {this.props.technologies}</i></p>
               <h4 className="text-center">{this.props.description}</h4>
                 <a href={`${this.props.link}`} target={this.props.id}>
-                  <button className="btn btn-default center-block">{this.props.button}</button>
+                  <button className="btn btn-default center-block hvr-pop">{this.props.button}</button>
                 </a>
             </div>
           </div>
@@ -52,7 +52,7 @@ export default class ProjectPreview extends React.Component {
               <div className="row">
                 <div className="col-xs-12 col-sm-10 col-md-6 col-xs-offset-0 col-sm-offset-1 col-md-offset-3 center-text">
                   <Link style={{'text-decoration': 'none'}} to='contact'>
-                    <button className="btn btn-default btn-lg center-block">CONTACT ME</button>
+                    <button className="btn btn-default btn-lg center-block hvr-pop">CONTACT ME</button>
                   </Link>
                 </div>
               </div>

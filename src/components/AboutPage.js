@@ -97,7 +97,7 @@ export default class AboutPage extends React.Component {
         <div className="row">
           <div className="col-xs-12 col-sm-10 col-md-6 col-xs-offset-0 col-sm-offset-1 col-md-offset-3 center-text">
             <Link style={{'text-decoration': 'none'}} to='contact'>
-              <button className="btn btn-default btn-lg center-block">CONTACT ME</button>
+              <button className="btn btn-default btn-lg center-block hvr-pop">CONTACT ME</button>
             </Link>
           </div>
         </div>

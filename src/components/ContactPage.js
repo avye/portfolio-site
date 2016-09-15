@@ -12,7 +12,7 @@ export default class ContactPage extends React.Component {
     this.state = {
       isLoading: false,
       buttonText: 'Send',
-      submitButtonStyle: 'btn btn-default'
+      submitButtonStyle: 'btn btn-default hvr-pop'
     };
   }
 
@@ -36,7 +36,8 @@ export default class ContactPage extends React.Component {
       // Use the variable that to be able to access the previous context
       that.setState({
         isLoading: true,
-        buttonText: 'SENT'
+        buttonText: 'SENT',
+        submitButtonStyle: 'btn btn-default'
       })
     })
     .catch(function (error) {
