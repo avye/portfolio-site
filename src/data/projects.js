@@ -10,7 +10,7 @@ const projects = [
     link: 'https://vimeo.com/173844724',
     button: 'VIEW DEMO',
     technologies: 'React Native, Redux, Node, Express, PostgreSQL',
-    description: 'Followthru is an iPhone productivity application for quickly creating smart lists that help users follow through on completing added items by providing easy access to those items and next steps to complete the item. I lead the team to build this from idea all the way to implementation.'
+    description: 'Followthru is an iPhone productivity application for quickly creating smart lists. The goal of these lists is to help users follow through on completing added items.  by providing easy access to those items and next steps to complete the item. I led the team to build this from idea all the way to implementation.'
   },
   {
     id: 'savor',
@@ -21,7 +21,7 @@ const projects = [
     link: 'https://savor-app.herokuapp.com/#/',
     button: 'VIEW SITE',
     technologies: 'Angular, Node, Express, MongoDB',
-    description: 'In order to better record and share meals amongst friends, I worked with a team to develop Savor. I engineered a database/server overhaul to go to a user-focused system. In addition to working on the UI, I worked to ensure the application was properly deployed and handled user authentication.'
+    description: 'In order to better record and share meals amongst friends, I led a team to develop Savor. I engineered a database/server overhaul to go to a user-focused system. In addition to working on the UI, I worked to ensure the application was properly deployed and handled user authentication.'
   },
   {
     id: 'trex-racer',
