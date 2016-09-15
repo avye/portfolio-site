@@ -16,11 +16,17 @@ a {
   text-decoration:none
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 /*To get rid of the resize option and the scrollbars at first*/
 textarea {
   resize: none;
   overflow: auto;
 }
+
+
 
 /*General Classes*/
 
