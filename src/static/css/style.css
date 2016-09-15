@@ -94,3 +94,8 @@ textarea {
 .contactHighlight {
   color: rgb(36,204,173)
 }
+
+.navbar-toggle {
+  box-shadow: none;
+  border: 0;
+}

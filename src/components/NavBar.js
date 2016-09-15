@@ -29,7 +29,9 @@ export default class NavBar extends React.Component {
           <h4>AV</h4>
         </Link>
       </Navbar.Brand>
-      <Navbar.Toggle />
+      <Navbar.Toggle>
+        <img src="/img/Menu.svg"></img>
+      </Navbar.Toggle>
     </Navbar.Header>
     <MediaQuery minDeviceWidth={1200}>
       <Nav pullRight>
