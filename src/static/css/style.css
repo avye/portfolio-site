@@ -11,6 +11,21 @@ p, div {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+/*To get rid of the underline on a links*/
+a {
+  text-decoration:none
+}
+
+/*To get rid of the resize option and the scrollbars at first*/
+textarea {
+  resize: none;
+  overflow: auto;
+}
+
+/*General Classes*/
+
+
+/*Welcome Greeting Classes*/
 .welcomeGreetingSpacing {
   margin-top: 7%
 }
@@ -22,6 +37,21 @@ p, div {
 /*Contact Page Classes*/
 .contactPageContainer {
   margin-bottom: 10%
+}
+
+.inputForm {
+    border: 0;
+    box-shadow: none;
+    border-bottom:1px solid gray;
+    border-radius: 0 !important;
+}
+
+/*.form-control:focus {
+  border-bottom:1px rgb(36,204,173);
+}*/
+.form-control:focus {
+  border-bottom: 1px solid rgb(36,204,173);
+  box-shadow: none;
 }
 
 /*Blog Page Classes*/
@@ -49,7 +79,10 @@ p, div {
 
 /*Welcome Greeting Classes*/
 .verticalLine{
-  height:200px; width:0px; position:relative; border-left:1px solid gray;
+  height:200px;
+  width:0px;
+  position:relative;
+  border-left:1px solid gray;
 }
 
 /*Footer Classes*/
