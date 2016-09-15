@@ -5,12 +5,13 @@ import { Link } from 'react-router';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import MediaQuery from 'react-responsive';
+import { applyContainerQuery } from 'react-container-query';
 
 var Scroll = require('react-scroll');
 var Element = Scroll.Element;
 var scroller = Scroll.scroller;
 
-export default class NavBar extends React.Component {
+class NavBar extends React.Component {
   onWorkButtonClick() {
     scroller.scrollTo('ScrollToPortfolio', {
       duration: 1500,
@@ -33,7 +34,8 @@ export default class NavBar extends React.Component {
         <img src="/img/Menu.svg"></img>
       </Navbar.Toggle>
     </Navbar.Header>
-    <MediaQuery minDeviceWidth={1200}>
+    {/*<MediaQuery minDeviceWidth={970}>*/}
+    {this.props.containerQuery.widthLargerThan1195 ?
       <Nav pullRight>
         <NavDropdown eventKey={1} title={
           <span><img src="/img/Menu.svg"></img></span>
@@ -53,9 +55,10 @@ export default class NavBar extends React.Component {
           </LinkContainer>
         </NavDropdown>
       </Nav>
-    </MediaQuery>
-    {/*For phones/tablets*/}
-    <MediaQuery maxDeviceWidth={1200}>
+    // </MediaQuery>
+    // {/*For phones/tablets*/}
+    :
+    // <MediaQuery maxDeviceWidth={970}>
       <Navbar.Collapse>
         <Nav pullRight>
         <LinkContainer to={{ pathname: '/', query: { work: 'work' } }}>
@@ -72,8 +75,18 @@ export default class NavBar extends React.Component {
         </LinkContainer>
         </Nav>
       </Navbar.Collapse>
-    </MediaQuery>
+    // </MediaQuery>
+    }
   </Navbar>
     );
   }
 }
+
+const query = {
+  'widthLargerThan1195': {
+    minWidth: 1195,
+  }
+};
+
+const HigherOrderComponent = applyContainerQuery(NavBar, query);
+export default HigherOrderComponent;
