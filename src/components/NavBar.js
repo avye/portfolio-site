@@ -4,7 +4,6 @@ import React from 'react';
 import { Link } from 'react-router';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import MediaQuery from 'react-responsive';
 import { applyContainerQuery } from 'react-container-query';
 
 var Scroll = require('react-scroll');
@@ -51,7 +50,7 @@ class NavBar extends React.Component {
           </LinkContainer>
           <MenuItem divider />
           <LinkContainer to={{ pathname: 'contact' }}>
-            <MenuItem eventKey={1.3} ><p className="contactHighlight">CONTACT</p></MenuItem>
+            <MenuItem eventKey={1.3} ><p className=""><b>CONTACT</b></p></MenuItem>
           </LinkContainer>
         </NavDropdown>
       </Nav>
@@ -71,7 +70,7 @@ class NavBar extends React.Component {
           <NavItem eventKey={1.3}>About</NavItem>
         </LinkContainer>
         <LinkContainer to={{ pathname: 'contact' }}>
-          <NavItem eventKey={1.3} >Contact</NavItem>
+          <NavItem eventKey={1.3} ><p className=""><b>CONTACT</b></p></NavItem>
         </LinkContainer>
         </Nav>
       </Navbar.Collapse>
