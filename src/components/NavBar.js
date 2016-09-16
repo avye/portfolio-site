@@ -42,9 +42,6 @@ class NavBar extends React.Component {
           <LinkContainer to={{ pathname: '/', query: { work: 'work' } }}>
             <MenuItem eventKey={1.1} onClick={() => this.onWorkButtonClick()}>Work</MenuItem>
           </LinkContainer>
-          <LinkContainer to={{ pathname: 'blog' }}>
-            <MenuItem eventKey={1.2}>Blog</MenuItem>
-          </LinkContainer>
           <LinkContainer to={{ pathname: 'about' }}>
             <MenuItem eventKey={1.3}>About</MenuItem>
           </LinkContainer>
@@ -62,9 +59,6 @@ class NavBar extends React.Component {
         <Nav pullRight>
         <LinkContainer to={{ pathname: '/', query: { work: 'work' } }}>
           <NavItem eventKey={1.1} onClick={() => this.onWorkButtonClick()}>Work</NavItem>
-        </LinkContainer>
-        <LinkContainer to={{ pathname: 'blog' }}>
-          <NavItem eventKey={1.2}>Blog</NavItem>
         </LinkContainer>
         <LinkContainer to={{ pathname: 'about' }}>
           <NavItem eventKey={1.3}>About</NavItem>
