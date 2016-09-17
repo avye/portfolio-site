@@ -16,7 +16,7 @@ class AboutPage extends React.Component {
         <div className="row">
           <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2 text-center">
             <h1 className="text-center"><big><b>Hello.</b></big></h1>
-            <h4>I have hiked the Pacific Crest Trail, I have traveled throughout the world, and I have found what I love doing.  I hope to share that with you.</h4>
+            <h4>I have hiked the entire Pacific Crest Trail, I have traveled throughout the world, and I have found what I love doing.  I hope to share that with you.</h4>
           </div>
         </div>
         <div className="row">
@@ -219,9 +219,9 @@ class AboutPage extends React.Component {
             }
           </div>
         </div>
-        <div className="row">
+        <div className="row aboutPageSpacing">
           <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2 text-center">
-            <h4>I have worked with many of the popular front-end MVC frameworks such as React and Angular to create highly functional applications. Combining back-end tools such as Node.js/Express and databases such as MongoDB/SQL I can create a full-stack web application. Whether it is a responsive Single Page App or even an iOS/Android mobile application, you can know that I will do everything to ensure your vision is wonderfully created.</h4>
+            <h4>I have worked with many popular front-end JavaScript MVC frameworks such as React and Angular to create highly functional applications. Combining back-end tools such as Node/Express and databases such as MongoDB/PostgreSQL I am comfortable across the full-stack. Whether it is a responsive Single Page App or even an iOS/Android mobile application, you can trust that I will do everything to ensure your vision is wonderfully created.</h4>
           </div>
         </div>
         <div className="row">

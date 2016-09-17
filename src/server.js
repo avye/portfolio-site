@@ -13,7 +13,7 @@ import Mailgun from 'mailgun-js';
 // Look in to conditionally importing this
 import authInfoLocal from './authInfo';
 
-Handle the deployed version authorization information
+// Handle the deployed version authorization information
 const authInfo = {};
 authInfo.user = process.env.authEmail || authInfoLocal.user
 authInfo.mailgunApiKey = process.env.authMailgunApiKey || authInfoLocal.mailgunApiKey
