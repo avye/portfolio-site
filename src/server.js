@@ -48,10 +48,10 @@ app.get('/contactSubmit', (req, res) => {
     console.log(body);
     if (error) {
       console.log(error);
-      res.end('Error')
+      res.end({data: data, error: error})
     } else {
       console.log('Message sent: ' + body);
-      res.end('Sent');
+      res.end({data: data, body: body});
     }
   });
 })
