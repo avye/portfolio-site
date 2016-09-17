@@ -55,7 +55,7 @@ class NavBar extends React.Component {
     // {/*For phones/tablets*/}
     :
     // <MediaQuery maxDeviceWidth={970}>
-      <Navbar.Collapse>
+      <Navbar.Collapse className="pull-right">
         <Nav pullRight>
         <LinkContainer to={{ pathname: '/', query: { work: 'work' } }}>
           <NavItem eventKey={1.1} onClick={() => this.onWorkButtonClick()}>Work</NavItem>
@@ -81,5 +81,5 @@ const query = {
   }
 };
 
-const HigherOrderComponent = applyContainerQuery(NavBar, query);
-export default HigherOrderComponent;
+const NavBarComponent = applyContainerQuery(NavBar, query);
+export default NavBarComponent;
