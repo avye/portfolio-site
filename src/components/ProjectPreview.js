@@ -16,11 +16,11 @@ export default class ProjectPreview extends React.Component {
           <div className="row">
             {this.props.name === "followthru" ?
               <div className="col-xs-10 col-sm-8 col-md-6 col-xs-offset-1 col-sm-offset-2 col-md-offset-3">
-                <img className="img-responsive img-rounded projectPreviewImage" src={`img/${this.props.image2}`}/>
+                <img className="img-responsive img-rounded projectPreviewImage" src={`${this.props.image2}`}/>
               </div>
               :
               <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2">
-                <img className="img-responsive img-rounded projectPreviewImage" src={`img/${this.props.image2}`}/>
+                <img className="img-responsive img-rounded projectPreviewImage" src={`${this.props.image2}`}/>
               </div>
             }
 
