@@ -8,13 +8,16 @@ import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
 import routes from './routes';
 import NotFoundPage from './components/NotFoundPage';
-// import nodemailer from 'nodemailer';
-// import authInfoLocal from './authInfo';
+import Mailgun from 'mailgun-js';
 
-// Handle the deployed version authorization information
-// const authInfo = {};
-// authInfo.user = process.env.authEmail || authInfoLocal.user
-// authInfo.pass = process.env.authPassword || authInfoLocal.pass
+// Look in to conditionally importing this
+import authInfoLocal from './authInfo';
+
+Handle the deployed version authorization information
+const authInfo = {};
+authInfo.user = process.env.authEmail || authInfoLocal.user
+authInfo.mailgunApiKey = process.env.authMailgunApiKey || authInfoLocal.mailgunApiKey
+authInfo.mailgunDomain = process.env.authMailgunDomain || authInfoLocal.mailgunDomain
 
 const app = new Express();
 const server = new Server(app);
@@ -23,29 +26,34 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use(Express.static(path.join(__dirname, 'static')));
 
-// const smtpTransport = nodemailer.createTransport("SMTP",{
-//     service: "Gmail",
-//     auth: authInfo
-// });
+const mailgun = Mailgun({apiKey: authInfo.mailgunApiKey, domain: authInfo.mailgunDomain})
+
 
 // Want this to be handled different as it is the contact form submission
-// app.get('/contactSubmit', (req, res) => {
-//   console.log('the query ', req.query);
-//   const mailOptions={
-//         to : authInfo.user,
-//         subject : 'New contact request from ' + req.query.contactName + ' at ' + req.query.contactCompany,
-//         text : 'Email me at ' + req.query.contactEmail + '\n' + req.query.contactDescription
-//   }
-//   smtpTransport.sendMail(mailOptions, function(error, response){
-//     if(error){
-//       console.log(error);
-//       res.end("error");
-//     }else{
-//       console.log("Message sent: " + response.message);
-//       res.end("sent");
-//     }
-//   })
-// })
+app.get('/contactSubmit', (req, res) => {
+  console.log('the query ', req.query);
+
+  const data = {
+    from: 'Excited User <me@samples.mailgun.org>',
+    to: authInfo.user,
+    subject: 'New contact request from ' + req.query.contactName + ' at ' + req.query.contactCompany,
+    text: 'Email me at ' + req.query.contactEmail + '\n' + req.query.contactDescription
+  };
+
+  mailgun.messages().send(data, (error, body) => {
+    console.log(body);
+    if (error) {
+      console.log(error);
+      res.end('error')
+      // CHECK THIS
+      // res.error('Error')
+    } else {
+      console.log('Message sent: ' + body);
+      res.end('Sent');
+    }
+  });
+})
+
 app.get('*', (req, res) => {
   match(
     { routes, location: req.url },
