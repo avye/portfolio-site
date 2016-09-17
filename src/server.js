@@ -10,14 +10,18 @@ import routes from './routes';
 import NotFoundPage from './components/NotFoundPage';
 import Mailgun from 'mailgun-js';
 
+const authInfo = {};
+
 // Look in to conditionally importing this
 // import authInfoLocal from './authInfo';
+// authInfo.user = authInfoLocal.user
+// authInfo.mailgunApiKey = authInfoLocal.mailgunApiKey
+// authInfo.mailgunDomain = authInfoLocal.mailgunDomain
 
 // Handle the deployed version authorization information
-const authInfo = {};
-authInfo.user = process.env.user || authInfoLocal.user
-authInfo.mailgunApiKey = process.env.authMailgunApiKey || authInfoLocal.mailgunApiKey
-authInfo.mailgunDomain = process.env.authMailgunDomain || authInfoLocal.mailgunDomain
+authInfo.user = process.env.user
+authInfo.mailgunApiKey = process.env.authMailgunApiKey
+authInfo.mailgunDomain = process.env.authMailgunDomain
 
 const app = new Express();
 const server = new Server(app);
