@@ -15,7 +15,7 @@ import Mailgun from 'mailgun-js';
 
 // Handle the deployed version authorization information
 const authInfo = {};
-authInfo.user = process.env.authEmail || authInfoLocal.user
+authInfo.user = process.env.user || authInfoLocal.user
 authInfo.mailgunApiKey = process.env.authMailgunApiKey || authInfoLocal.mailgunApiKey
 authInfo.mailgunDomain = process.env.authMailgunDomain || authInfoLocal.mailgunDomain
 
