@@ -25,12 +25,12 @@ export default class Footer extends React.Component {
             <p>Copyright {new Date().getFullYear()} &copy;</p>
           </div>
           <div className="col-xs-2 col-sm-1 col-md-1 col-xs-offset-0 col-sm-offset-4 col-md-offset-6">
-            <a href="https://www.linkedin.com/in/andrewvye">
+            <a href="https://www.linkedin.com/in/andrewvye" target="LinkedIn">
               <img src="/img/LinkedIn.svg" className="img-responsive center-block" />
             </a>
           </div>
           <div className="col-xs-2 col-sm-1 col-md-1">
-            <a href="https://github.com/avye">
+            <a href="https://github.com/avye" target="GitHub">
               <img src="/img/GitHub.svg" className="img-responsive center-block" />
             </a>
           </div>
@@ -40,7 +40,7 @@ export default class Footer extends React.Component {
             </Link>
           </div>
           <div className="col-xs-2 col-sm-1 col-md-1">
-            <a href="https://medium.com/@a.vye">
+            <a href="https://medium.com/@a.vye" target="Medium">
               <img src="/img/MediumLogo.svg" className="img-responsive center-block" />
             </a>
           </div>
