@@ -92,11 +92,8 @@ textarea {
   margin-top: 3%
 }
 
-/*.form-control:focus {
-  border-bottom:1px rgb(36,204,173);
-}*/
 .form-control:focus {
-  border-bottom: 1px solid rgb(36,204,173);
+  border-bottom: 1px solid rgb(225, 206, 148);
   box-shadow: none;
 }
 
