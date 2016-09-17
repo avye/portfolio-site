@@ -11,7 +11,7 @@ import NotFoundPage from './components/NotFoundPage';
 import Mailgun from 'mailgun-js';
 
 // Look in to conditionally importing this
-import authInfoLocal from './authInfo';
+// import authInfoLocal from './authInfo';
 
 // Handle the deployed version authorization information
 const authInfo = {};
@@ -44,9 +44,7 @@ app.get('/contactSubmit', (req, res) => {
     console.log(body);
     if (error) {
       console.log(error);
-      res.end('error')
-      // CHECK THIS
-      // res.error('Error')
+      res.end('Error')
     } else {
       console.log('Message sent: ' + body);
       res.end('Sent');
