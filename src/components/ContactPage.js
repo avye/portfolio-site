@@ -34,6 +34,7 @@ export default class ContactPage extends React.Component {
     })
     .then(function (response) {
       // Use the variable that to be able to access the previous context
+      console.log(response);
       that.setState({
         isLoading: true,
         buttonText: 'SENT',
