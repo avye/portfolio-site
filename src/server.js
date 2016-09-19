@@ -36,22 +36,23 @@ const mailgun = Mailgun({apiKey: authInfo.mailgunApiKey, domain: authInfo.mailgu
 // Want this to be handled different as it is the contact form submission
 app.get('/contactSubmit', (req, res) => {
   console.log('the query ', req.query);
-
   const data = {
-    from: 'Excited User <me@samples.mailgun.org>',
+    from: 'Contact Request <me@samples.mailgun.org>',
     to: authInfo.user,
     subject: 'New contact request from ' + req.query.contactName + ' at ' + req.query.contactCompany,
-    text: 'Email me at ' + req.query.contactEmail + '\n' + req.query.contactDescription
+    text: 'Email me at ' + req.query.contactEmail + '\n' + 'I am interested in: ' + req.query.contactDescription
   };
+  console.log('the authInfo ', authInfo);
 
+  console.log('the data ', data);
   mailgun.messages().send(data, (error, body) => {
-    console.log(body);
+    console.log('this is the body ', body);
     if (error) {
-      console.log(error);
-      res.end({data: data, error: error})
+      console.log('the data in error ', )
+      res.end('Message Error')
     } else {
       console.log('Message sent: ' + body);
-      res.end({data: data, body: body});
+      res.end('Message Sent');
     }
   });
 })
