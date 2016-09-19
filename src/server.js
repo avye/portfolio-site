@@ -20,8 +20,8 @@ const authInfo = {};
 
 // Handle the deployed version authorization information
 authInfo.user = process.env.user
-authInfo.mailgunApiKey = process.env.authMailgunApiKey
-authInfo.mailgunDomain = process.env.authMailgunDomain
+authInfo.mailgunApiKey = process.env.mailgunApiKey
+authInfo.mailgunDomain = process.env.mailgunDomain
 
 const app = new Express();
 const server = new Server(app);
