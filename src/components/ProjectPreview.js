@@ -34,7 +34,7 @@ export default class ProjectPreview extends React.Component {
           <div className="row">
             <div className="col-xs-12 col-sm-10 col-md-6 col-xs-offset-0 col-sm-offset-1 col-md-offset-3 center-text">
               <p className="text-center"><i>Built with {this.props.technologies}</i></p>
-              <h4 className="text-center">{this.props.description}</h4>
+              <h4 className="">{this.props.description}</h4>
                 <a href={`${this.props.link}`} target={this.props.id}>
                   <button className="btn btn-default btn-lg center-block hvr-pop">{this.props.button}</button>
                 </a>
