@@ -12,7 +12,6 @@ import Mailgun from 'mailgun-js';
 
 const authInfo = {};
 
-// Look in to conditionally importing this
 // import authInfoLocal from './authInfo';
 // authInfo.user = authInfoLocal.user
 // authInfo.mailgunApiKey = authInfoLocal.mailgunApiKey
@@ -35,23 +34,17 @@ const mailgun = Mailgun({apiKey: authInfo.mailgunApiKey, domain: authInfo.mailgu
 
 // Want this to be handled different as it is the contact form submission
 app.get('/contactSubmit', (req, res) => {
-  console.log('the query ', req.query);
   const data = {
     from: 'Contact Request <me@samples.mailgun.org>',
     to: authInfo.user,
     subject: 'New contact request from ' + req.query.contactName + ' at ' + req.query.contactCompany,
     text: 'Email me at ' + req.query.contactEmail + '\n' + 'I am interested in: ' + req.query.contactDescription
   };
-  console.log('the authInfo ', authInfo);
 
-  console.log('the data ', data);
   mailgun.messages().send(data, (error, body) => {
-    console.log('this is the body ', body);
     if (error) {
-      console.log('the data in error ', )
       res.end('Message Error')
     } else {
-      console.log('Message sent: ' + body);
       res.end('Message Sent');
     }
   });
