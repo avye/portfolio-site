@@ -66,19 +66,19 @@ export default class ContactPage extends React.Component {
             <div className="form-group">
               <label for="contactName" className="col-xs-12 col-sm-11 col-md-10 col-xs-offset-0 col-sm-offset-1 col-md-offset-2 control-label">Name</label>
               <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2">
-                <input type="text" className="inputForm input-lg form-control" id="contactName" placeholder="What's your name?" ref='contactFormName'></input>
+                <input type="text" className="inputForm input-lg form-control" id="contactName" placeholder="What's your name?" ref='contactFormName' required="required"></input>
               </div>
             </div>
             <div className="form-group">
               <label for="contactCompany" className="col-xs-12 col-sm-11 col-md-10 col-xs-offset-0 col-sm-offset-1 col-md-offset-2 control-label contactFormSpacing">Company</label>
               <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2">
-                <input type="text" className=" inputForm form-control input-lg" id="contactCompany" placeholder="Who do you work for?" ref='contactCompany'></input>
+                <input type="text" className=" inputForm form-control input-lg" id="contactCompany" placeholder="Who do you work for?" ref='contactCompany' required="required"></input>
               </div>
             </div>
             <div className="form-group">
               <label for="contactEmail" className="col-xs-12 col-sm-11 col-md-10 col-xs-offset-0 col-sm-offset-1 col-md-offset-2 control-label contactFormSpacing">Email</label>
               <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2">
-                <input type="email" className="inputForm input-lg form-control" id="contactEmail" placeholder="How can I reach you?" ref='contactEmail'></input>
+                <input type="email" className="inputForm input-lg form-control" id="contactEmail" placeholder="How can I reach you?" ref='contactEmail' required="required"></input>
               </div>
             </div>
             <div className="form-group">
