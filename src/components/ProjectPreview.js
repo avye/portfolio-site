@@ -41,7 +41,7 @@ export default class ProjectPreview extends React.Component {
             </div>
           </div>
           {/*Adding in the contact callout here in order to maintain symmetry of the centering*/}
-          {this.props.name === "Trex Racer" ?
+          {this.props.id === "trex-racer" ?
             <div>
               <div className="row projectPreviewCallout">
                 <div className="col-xs-12 col-sm-12 col-md-12 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 center-text">
