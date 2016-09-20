@@ -20,7 +20,7 @@
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
-  &hover, &foucs, &active: {
+  &:hover:focus:active {
     -webkit-animation-name: hvr-pop;
     animation-name: hvr-pop;
     -webkit-animation-duration: 0.3s;

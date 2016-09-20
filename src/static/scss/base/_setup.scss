@@ -6,7 +6,7 @@ body {
 /* Will get rid of underline on hover of links */
 a {
   text-decoration:none;
-  &:hover: {
+  &:hover {
     text-decoration: none;
   }
 }

@@ -1,149 +1,103 @@
-/* Add in body padding to ensure that no content is initally covered by the navbar*/
+/* Will give spacing for the navbar */
 body {
-  padding-top: 70px;
-}
+  padding-top: 70px; }
 
-/*Set fonts to google open source font*/
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Source Sans Pro', sans-serif;
-}
-p, div {
-    font-family: 'Source Sans Pro', sans-serif;
-}
-
-/*To get rid of the underline on a links*/
+/* Will get rid of underline on hover of links */
 a {
-  text-decoration:none
-}
-
-a:hover {
-    text-decoration: none;
-}
+  text-decoration: none; }
+  a:hover {
+    text-decoration: none; }
 
 /*To get rid of the resize option and the scrollbars at first*/
 textarea {
   resize: none;
-  overflow: auto;
-}
+  overflow: auto; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Source Sans Pro", sans-serif; }
+
+p, div {
+  font-family: "Source Sans Pro", sans-serif; }
 
 /*To animate buttons some (from hover.css)*/
-/* Pop */
 @-webkit-keyframes hvr-pop {
   50% {
     -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-  }
-}
-
+    transform: scale(1.2); } }
 @keyframes hvr-pop {
   50% {
     -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-  }
-}
-
+    transform: scale(1.2); } }
 .hvr-pop {
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 1px transparent;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-}
-.hvr-pop:hover, .hvr-pop:focus, .hvr-pop:active {
-  -webkit-animation-name: hvr-pop;
-  animation-name: hvr-pop;
-  -webkit-animation-duration: 0.3s;
-  animation-duration: 0.3s;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-}
+  -moz-osx-font-smoothing: grayscale; }
+  .hvr-pop:hover:focus:active {
+    -webkit-animation-name: hvr-pop;
+    animation-name: hvr-pop;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1; }
 
-/*General Classes*/
-
-
-/*Welcome Greeting Classes*/
-.welcomeGreetingSpacing {
-  margin-top: 7%
-}
-/*About Page Classes*/
-.aboutPageContainer {
-  margin-bottom: 3%
-}
-
-.aboutPageSpacing {
-  margin-top: 3%
-}
-
-/*Contact Page Classes*/
-.contactPageContainer {
-  margin-bottom: 10%
-}
-
-.inputForm {
-    border: 0;
-    box-shadow: none;
-    border-bottom:1px solid gray;
-    border-radius: 0 !important;
-}
-
-.contactFormSpacing {
-  margin-top:3%
-}
-.submitButtonSpacing {
-  margin-top: 3%
-}
-
-.form-control:focus {
-  border-bottom: 1px solid rgb(225, 206, 148);
-  box-shadow: none;
-}
-
-/*Blog Page Classes*/
-.blogPageContainer {
-  margin-bottom: 10%
-}
-
-
-/*Project Preview Classes*/
-.projectPreviewCard {
-  margin-bottom: 10%
-}
-
-.projectPreviewImage {
-  margin-bottom: 3%
-}
-
-.projectPreviewHeader {
-  margin-bottom: 3%
-}
-
-.projectPreviewCallout {
-  margin-top: 3%
-}
-
-/*Welcome Greeting Classes*/
-.verticalLine{
-  height:200px;
-  width:0px;
-  position:relative;
-  border-left:1px solid gray;
-}
-
-/*Footer Classes*/
 .footerContainer {
   margin-top: 3%;
-  margin-bottom: 3%
-}
+  margin-bottom: 3%; }
 
-/*NavBar Classes*/
-.contactHighlight {
-  color: rgb(36,204,173)
-}
+.inputForm {
+  border: 0;
+  box-shadow: none;
+  border-bottom: 1px solid gray;
+  border-radius: 0 !important; }
+
+.form-control:focus {
+  border-bottom: 1px solid #e1ce94;
+  box-shadow: none; }
 
 .navbar-toggle {
   box-shadow: none;
-  border: 0;
-}
+  border: 0; }
+
+/*About Page Classes*/
+.aboutPageContainer {
+  margin-bottom: 3%; }
+
+.aboutPageSpacing {
+  margin-top: 3%; }
+
+.contactPageContainer {
+  margin-bottom: 10%; }
+
+.contactFormSpacing {
+  margin-top: 3%; }
+
+.submitButtonSpacing {
+  margin-top: 3%; }
+
+.welcomeGreetingSpacing {
+  margin-top: 7%; }
+
+.projectPreviewCard {
+  margin-bottom: 10%; }
+
+.projectPreviewImage {
+  margin-bottom: 3%; }
+
+.projectPreviewHeader {
+  margin-bottom: 3%; }
+
+.projectPreviewCallout {
+  margin-top: 3%; }
+
+.verticalLine {
+  height: 200px;
+  width: 0px;
+  position: relative;
+  border-left: 1px solid gray; }
+
+/*# sourceMappingURL=style.css.map */
