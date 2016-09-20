@@ -4,7 +4,7 @@
   "description": "Andrew's portfolio",
   "main": "src/server.js",
   "scripts": {
-    "postinstall": "npm run build",
+    "postinstall": "node-sass src/static/scss/main.scss src/static/css/style.css && npm run build",
     "start": "NODE_ENV=production node_modules/.bin/babel-node --presets 'react,es2015' src/server.js",
     "build": "NODE_ENV=production node_modules/.bin/webpack -p"
   },
@@ -20,6 +20,7 @@
     "ejs": "^2.5.1",
     "express": "^4.14.0",
     "mailgun-js": "^0.7.12",
+    "node-sass": "^3.10.0",
     "react": "^15.3.1",
     "react-bootstrap": "^0.30.3",
     "react-container-query": "^0.5.8",
