@@ -2,3 +2,17 @@
 body {
   padding-top: 70px;
 }
+
+/* Will get rid of underline on hover of links */
+a {
+  text-decoration:none;
+  &:hover: {
+    text-decoration: none;
+  }
+}
+
+/*To get rid of the resize option and the scrollbars at first*/
+textarea {
+  resize: none;
+  overflow: auto;
+}
