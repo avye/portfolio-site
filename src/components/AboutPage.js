@@ -221,7 +221,7 @@ class AboutPage extends React.Component {
         </div>
         <div className="row aboutPageSpacing">
           <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2 text-center">
-            <h4>I have worked with many popular front-end JavaScript MVC frameworks such as React and Angular to create highly functional applications. Combining back-end tools such as Node/Express and databases such as MongoDB/PostgreSQL I am comfortable across the full-stack. Whether it is a responsive Single Page App or even an iOS/Android mobile application, you can trust that I will do everything to ensure your vision is wonderfully created.</h4>
+            <h4>I have worked with many popular front-end JavaScript frameworks such as React and Angular to create highly functional applications. Combining back-end tools such as Node/Express and databases such as MongoDB/PostgreSQL I am comfortable across the full-stack. Whether it is a responsive Single Page App or even an iOS/Android mobile application, you can trust that I will do everything to ensure your vision is wonderfully created.</h4>
           </div>
         </div>
         <div className="row">
