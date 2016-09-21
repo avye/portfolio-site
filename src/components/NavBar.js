@@ -11,6 +11,21 @@ var Element = Scroll.Element;
 var scroller = Scroll.scroller;
 
 class NavBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      navExpanded: false
+    };
+  }
+
+  onNavItemClick() {
+    this.setState({ navExpanded: false });
+  }
+
+  onNavbarToggle() {
+    this.setState({ navExpanded: ! this.state.navExpanded });
+  }
+
   onWorkButtonClick() {
     scroller.scrollTo('ScrollToPortfolio', {
       duration: 1500,
@@ -22,7 +37,7 @@ class NavBar extends React.Component {
 
   render() {
     return (
-      <Navbar fixedTop>
+      <Navbar fixedTop navExpanded={ this.state.navExpanded } onToggle={ this.onNavbarToggle.bind(this) }>
     <Navbar.Header>
       <Navbar.Brand>
         <Link to="/">
@@ -33,7 +48,6 @@ class NavBar extends React.Component {
         <img src="/img/Menu.svg"></img>
       </Navbar.Toggle>
     </Navbar.Header>
-    {/*<MediaQuery minDeviceWidth={970}>*/}
     {this.props.containerQuery.widthLargerThan1195 ?
       <Nav pullRight>
         <NavDropdown eventKey={1} title={
@@ -51,24 +65,21 @@ class NavBar extends React.Component {
           </LinkContainer>
         </NavDropdown>
       </Nav>
-    // </MediaQuery>
-    // {/*For phones/tablets*/}
     :
-    // <MediaQuery maxDeviceWidth={970}>
+    // {/*For phones/tablets*/}
       <Navbar.Collapse className="pull-right">
         <Nav pullRight>
         <LinkContainer to={{ pathname: '/', query: { work: 'work' } }}>
-          <NavItem eventKey={1.1} onClick={() => this.onWorkButtonClick()}>Work</NavItem>
+          <NavItem eventKey={1.1} onClick={ () => this.onWorkButtonClick() }>Work</NavItem>
         </LinkContainer>
         <LinkContainer to={{ pathname: 'about' }}>
-          <NavItem eventKey={1.3}>About</NavItem>
+          <NavItem eventKey={1.3} onClick={ this.onNavItemClick }>About</NavItem>
         </LinkContainer>
         <LinkContainer to={{ pathname: 'contact' }}>
-          <NavItem eventKey={1.3} ><p className=""><b>CONTACT</b></p></NavItem>
+          <NavItem eventKey={1.3} onClick={ this.onNavItemClick }><p className=""><b>CONTACT</b></p></NavItem>
         </LinkContainer>
         </Nav>
       </Navbar.Collapse>
-    // </MediaQuery>
     }
   </Navbar>
     );
