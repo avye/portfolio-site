@@ -3,20 +3,8 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-var Scroll = require('react-scroll');
-var Element = Scroll.Element;
-var scroller = Scroll.scroller;
 
 export default class Footer extends React.Component {
-  onWorkButtonClick() {
-    scroller.scrollTo('ScrollToPortfolio', {
-      duration: 1500,
-      delay: 100,
-      smooth: true,
-      offset: -40
-    })
-  }
-
   render() {
     return (
       <div className="container">
