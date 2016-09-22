@@ -29,7 +29,7 @@ const projects = [
   },
   {
     id: 'trex-racer',
-    position: 'last'
+    position: 'last',
     name: 'T-Rex Racer',
     subtitle: 'BACK-END DESIGN - UI - FRONT-END FUNCTIONALITY',
     type: 'web',
