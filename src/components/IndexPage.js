@@ -11,6 +11,8 @@ var scroller = Scroll.scroller;
 
 export default class IndexPage extends React.Component {
   componentDidMount() {
+    // If the id is work that means they have clicked on the work button
+    // So we will automatically scroll them to the work section
     const id = this.props.location.query.work;
     if (id === "work") {
       scroller.scrollTo('ScrollToPortfolio', {

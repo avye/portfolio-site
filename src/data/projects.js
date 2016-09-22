@@ -3,8 +3,10 @@
 const projects = [
   {
     id: 'followthru',
+    position: '',
     name: 'followthru',
     subtitle: 'FRONT-END ARCHITECTURE - API INTEGRATIONS - UI',
+    type: 'mobile',
     image1: 'followthru1.png',
     image2: 'https://d3bfbpfngihhgs.cloudfront.net/followthru2.png',
     link: 'https://vimeo.com/173844724',
@@ -14,8 +16,10 @@ const projects = [
   },
   {
     id: 'savor',
+    position: '',
     name: 'Savor',
     subtitle: 'BACK-END STRUCTURE - AUTHENTICATION - DEPLOYMENT - UI',
+    type: 'web',
     image1: 'savor1.png',
     image2: 'https://d3bfbpfngihhgs.cloudfront.net/savor2.png',
     link: 'https://savor-app.herokuapp.com/#/',
@@ -25,8 +29,10 @@ const projects = [
   },
   {
     id: 'trex-racer',
+    position: 'last'
     name: 'T-Rex Racer',
     subtitle: 'BACK-END DESIGN - UI - FRONT-END FUNCTIONALITY',
+    type: 'web',
     image1: 'trex-racer1.png',
     image2: 'https://d3bfbpfngihhgs.cloudfront.net/trex-racer2.png',
     link: 'https://trex-timer.herokuapp.com/#/signin',

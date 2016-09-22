@@ -33,8 +33,8 @@ export default class ContactPage extends React.Component {
       params: message
     })
     .then(function (response) {
-      // Use the variable that to be able to access the previous context
       console.log(response);
+      // Use the variable that to be able to access the previous context
       that.setState({
         isLoading: true,
         buttonText: 'SENT',
@@ -43,6 +43,7 @@ export default class ContactPage extends React.Component {
     })
     .catch(function (error) {
       console.log(error);
+      // Use the variable that to be able to access the previous context
       that.setState({
         buttonText: 'Error',
         submitButtonStyle: 'btn btn-danger'

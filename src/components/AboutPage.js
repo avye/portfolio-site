@@ -7,10 +7,6 @@ import { applyContainerQuery } from 'react-container-query';
 
 class AboutPage extends React.Component {
   render() {
-    const axisValues = [
-      'JavaScript',
-      'React'
-    ]
     return (
       <div className="container aboutPageContainer">
         <div className="row">
@@ -21,6 +17,7 @@ class AboutPage extends React.Component {
         </div>
         <div className="row">
           <div className="col-xs-12 col-sm-12 col-md-12 col-xs-offset-0 col-sm-offset-0 col-md-offset-0">
+            {/*For web we have one large bar chart, for mobile we have two charts that split the data*/}
             {this.props.containerQuery.widthLargerThan1000 ?
               <VictoryChart
                 height={200}
@@ -95,126 +92,127 @@ class AboutPage extends React.Component {
 
             :
 
+            // For mobile/tablets
             <div>
-            <VictoryChart
-              height={250}
-              padding={{
-                top: 20,
-                bottom: 30,
-                left: 75,
-                right: 40
-              }}
-            >
-              <VictoryAxis
-                tickValues={[
-                  "Redux",
-                  "React",
-                  "Angular",
-                  "React Native",
-                  "Node"
-                ]}
-                style={{
-                  axis: {stroke: "transparent"},
-                  tickLabels: {
-                    fontSize: 12
-                  }
+              <VictoryChart
+                height={250}
+                padding={{
+                  top: 20,
+                  bottom: 30,
+                  left: 75,
+                  right: 40
                 }}
-              />
-              <VictoryAxis
-                dependentAxis
-                style={{
-                  axis: {stroke: "transparent"},
-                  ticks: {stroke: "transparent"},
-                  tickLabels: {
-                    fontSize: 12
-                  }
-                }}
-                tickValues={[
-                  "Beginner",
-                  "Intermediate",
-                  "Advanced",
-                  "Expert"
-                ]}
-              />
-              <VictoryBar
-                data={[
-                  {x: 1, y: 3},
-                  {x: 2, y: 4},
-                  {x: 3, y: 3},
-                  {x: 4, y: 3},
-                  {x: 5, y: 4}
-                ]}
-                style={{
-                  data: {
-                  fill: (data) => data.y === 4 ?
-                    "rgb(225,206,148)" : data.y === 3 ?
-                    "rgb(202,185,133)" : data.y === 2 ?
-                    "rgb(180,164,118)" : "rgb(157,144,103)"
-                  }
-                }}
+              >
+                <VictoryAxis
+                  tickValues={[
+                    "Redux",
+                    "React",
+                    "Angular",
+                    "React Native",
+                    "Node"
+                  ]}
+                  style={{
+                    axis: {stroke: "transparent"},
+                    tickLabels: {
+                      fontSize: 12
+                    }
+                  }}
                 />
-            </VictoryChart>
+                <VictoryAxis
+                  dependentAxis
+                  style={{
+                    axis: {stroke: "transparent"},
+                    ticks: {stroke: "transparent"},
+                    tickLabels: {
+                      fontSize: 12
+                    }
+                  }}
+                  tickValues={[
+                    "Beginner",
+                    "Intermediate",
+                    "Advanced",
+                    "Expert"
+                  ]}
+                />
+                <VictoryBar
+                  data={[
+                    {x: 1, y: 3},
+                    {x: 2, y: 4},
+                    {x: 3, y: 3},
+                    {x: 4, y: 3},
+                    {x: 5, y: 4}
+                  ]}
+                  style={{
+                    data: {
+                    fill: (data) => data.y === 4 ?
+                      "rgb(225,206,148)" : data.y === 3 ?
+                      "rgb(202,185,133)" : data.y === 2 ?
+                      "rgb(180,164,118)" : "rgb(157,144,103)"
+                    }
+                  }}
+                  />
+              </VictoryChart>
 
-            <VictoryChart
-              height={250}
-              padding={{
-                top: 20,
-                bottom: 30,
-                left: 75,
-                right: 40
-              }}
-            >
-              <VictoryAxis
-                tickValues={[
-                  "PostgreSQL",
-                  "MongoDB",
-                  "MySQL",
-                  "Socket.IO",
-                  "UI/UX",
-                  "Webpack/Grunt"
-                ]}
-                style={{
-                  axis: {stroke: "transparent"},
-                  tickLabels: {
-                    fontSize: 12
-                  }
+              <VictoryChart
+                height={250}
+                padding={{
+                  top: 20,
+                  bottom: 30,
+                  left: 75,
+                  right: 40
                 }}
-              />
-              <VictoryAxis
-                dependentAxis
-                style={{
-                  axis: {stroke: "transparent"},
-                  ticks: {stroke: "transparent"},
-                  tickLabels: {
-                    fontSize: 12
-                  }
-                }}
-                tickValues={[
-                  "Beginner",
-                  "Intermediate",
-                  "Advanced",
-                  "Expert"
-                ]}
-              />
-              <VictoryBar
-                data={[
-                  {x: 1, y: 2},
-                  {x: 2, y: 3},
-                  {x: 3, y: 2},
-                  {x: 4, y: 2},
-                  {x: 5, y: 3},
-                  {x: 6, y: 2}
-                ]}
-                style={{
-                  data: {
-                  fill: (data) => data.y === 4 ?
-                    "rgb(225,206,148)" : data.y === 3 ?
-                    "rgb(202,185,133)" : data.y === 2 ?
-                    "rgb(180,164,118)" : "rgb(157,144,103)"
-                  }
-                }}
+              >
+                <VictoryAxis
+                  tickValues={[
+                    "PostgreSQL",
+                    "MongoDB",
+                    "MySQL",
+                    "Socket.IO",
+                    "UI/UX",
+                    "Webpack/Grunt"
+                  ]}
+                  style={{
+                    axis: {stroke: "transparent"},
+                    tickLabels: {
+                      fontSize: 12
+                    }
+                  }}
                 />
-            </VictoryChart>
+                <VictoryAxis
+                  dependentAxis
+                  style={{
+                    axis: {stroke: "transparent"},
+                    ticks: {stroke: "transparent"},
+                    tickLabels: {
+                      fontSize: 12
+                    }
+                  }}
+                  tickValues={[
+                    "Beginner",
+                    "Intermediate",
+                    "Advanced",
+                    "Expert"
+                  ]}
+                />
+                <VictoryBar
+                  data={[
+                    {x: 1, y: 2},
+                    {x: 2, y: 3},
+                    {x: 3, y: 2},
+                    {x: 4, y: 2},
+                    {x: 5, y: 3},
+                    {x: 6, y: 2}
+                  ]}
+                  style={{
+                    data: {
+                    fill: (data) => data.y === 4 ?
+                      "rgb(225,206,148)" : data.y === 3 ?
+                      "rgb(202,185,133)" : data.y === 2 ?
+                      "rgb(180,164,118)" : "rgb(157,144,103)"
+                    }
+                  }}
+                  />
+              </VictoryChart>
             </div>
             }
           </div>

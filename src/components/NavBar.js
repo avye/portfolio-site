@@ -39,40 +39,44 @@ class NavBar extends React.Component {
             <img src="/img/Menu.svg"></img>
           </Navbar.Toggle>
         </Navbar.Header>
-    {this.props.containerQuery.widthLargerThan1195 ?
-      <Nav pullRight>
-        <NavDropdown eventKey={1} title={
-          <span><img src="/img/Menu.svg"></img></span>
-         } id="basic-nav-dropdown" noCaret>
-          <LinkContainer to={{ pathname: '/', query: { work: 'work' } }}>
-            <MenuItem eventKey={1.1} onClick={() => this.onWorkButtonClick()}>Work</MenuItem>
-          </LinkContainer>
-          <LinkContainer to={{ pathname: 'about' }}>
-            <MenuItem eventKey={1.3}>About</MenuItem>
-          </LinkContainer>
-          <MenuItem divider />
-          <LinkContainer to={{ pathname: 'contact' }}>
-            <MenuItem eventKey={1.3} ><p className=""><b>CONTACT</b></p></MenuItem>
-          </LinkContainer>
-        </NavDropdown>
-      </Nav>
-    :
-    // {/*For phones/tablets*/}
-      <Navbar.Collapse className="pull-right">
-        <Nav pullRight>
-        <LinkContainer to={{ pathname: '/', query: { work: 'work' } }}>
-          <NavItem eventKey={1.1} onClick={ () => this.onWorkButtonClick() }>Work</NavItem>
-        </LinkContainer>
-        <LinkContainer to={{ pathname: 'about' }}>
-          <NavItem eventKey={1.3}>About</NavItem>
-        </LinkContainer>
-        <LinkContainer to={{ pathname: 'contact' }}>
-          <NavItem eventKey={1.3}><p className=""><b>CONTACT</b></p></NavItem>
-        </LinkContainer>
-        </Nav>
-      </Navbar.Collapse>
-    }
-  </Navbar>
+
+        {/*Utilize a containerQuery to have a dropdown button for web and a collapsed navbar for mobile*/}
+        {this.props.containerQuery.widthLargerThan1195 ?
+          <Nav pullRight>
+            <NavDropdown eventKey={1} title={
+              <span><img src="/img/Menu.svg"></img></span>
+             } id="basic-nav-dropdown" noCaret>
+              <LinkContainer to={{ pathname: '/', query: { work: 'work' } }}>
+                <MenuItem eventKey={1.1} onClick={() => this.onWorkButtonClick()}>Work</MenuItem>
+              </LinkContainer>
+              <LinkContainer to={{ pathname: 'about' }}>
+                <MenuItem eventKey={1.3}>About</MenuItem>
+              </LinkContainer>
+              <MenuItem divider />
+              <LinkContainer to={{ pathname: 'contact' }}>
+                <MenuItem eventKey={1.3} ><p className=""><b>CONTACT</b></p></MenuItem>
+              </LinkContainer>
+            </NavDropdown>
+          </Nav>
+
+        :
+
+        // {/*For phones/tablets*/}
+          <Navbar.Collapse className="pull-right">
+            <Nav pullRight>
+            <LinkContainer to={{ pathname: '/', query: { work: 'work' } }}>
+              <NavItem eventKey={1.1} onClick={ () => this.onWorkButtonClick() }>Work</NavItem>
+            </LinkContainer>
+            <LinkContainer to={{ pathname: 'about' }}>
+              <NavItem eventKey={1.3}>About</NavItem>
+            </LinkContainer>
+            <LinkContainer to={{ pathname: 'contact' }}>
+              <NavItem eventKey={1.3}><p className=""><b>CONTACT</b></p></NavItem>
+            </LinkContainer>
+            </Nav>
+          </Navbar.Collapse>
+        }
+      </Navbar>
     );
   }
 }

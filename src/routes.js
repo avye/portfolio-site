@@ -8,6 +8,8 @@ import NotFoundPage from './components/NotFoundPage';
 import AboutPage from './components/AboutPage';
 import ContactPage from './components/ContactPage';
 
+// Update what component to display depending upon the route
+// Note that all routes are children of Layout so the Layout component will always be displayed
 const routes = (
   <Route path="/" component={Layout}>
     <IndexRoute component={IndexPage}/>

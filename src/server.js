@@ -12,6 +12,7 @@ import Mailgun from 'mailgun-js';
 
 const authInfo = {};
 
+// For testing local
 // import authInfoLocal from './authInfo';
 // authInfo.user = authInfoLocal.user
 // authInfo.mailgunApiKey = authInfoLocal.mailgunApiKey
@@ -24,16 +25,19 @@ authInfo.mailgunDomain = process.env.mailgunDomain
 
 const app = new Express();
 const server = new Server(app);
+const mailgun = Mailgun({apiKey: authInfo.mailgunApiKey, domain: authInfo.mailgunDomain})
+
+// Use ejs as our view engine so that we will generate html from our JS
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 app.use(Express.static(path.join(__dirname, 'static')));
 
-const mailgun = Mailgun({apiKey: authInfo.mailgunApiKey, domain: authInfo.mailgunDomain})
 
 
 // Want this to be handled different as it is the contact form submission
 app.get('/contactSubmit', (req, res) => {
+  // Create the email mailgun will send
   const data = {
     from: 'Contact Request <me@samples.mailgun.org>',
     to: authInfo.user,
@@ -50,6 +54,7 @@ app.get('/contactSubmit', (req, res) => {
   });
 })
 
+
 app.get('*', (req, res) => {
   match(
     { routes, location: req.url },
@@ -59,14 +64,17 @@ app.get('*', (req, res) => {
         return res.status(500).send(err.message);
       }
 
+      // Handle redirects
       if (redirectLocation) {
         return res.redirect(302, redirectLocation.pathname + redirectLocation.search);
       }
 
       let markup;
       if (renderProps) {
+        // Render the react page for the route
         markup = renderToString(<RouterContext {...renderProps}/>);
       } else {
+        // Render our not found page if route not defined
         markup = renderToString(<NotFoundPage/>);
         res.status(404);
       }
@@ -78,6 +86,8 @@ app.get('*', (req, res) => {
 
 const port = process.env.PORT || 3000;
 const env = process.env.NODE_ENV || 'production';
+
+// Start up our server
 server.listen(port, err => {
   if (err) {
     return console.error(err);

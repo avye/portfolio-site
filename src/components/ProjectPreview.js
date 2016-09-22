@@ -14,7 +14,8 @@ export default class ProjectPreview extends React.Component {
             </div>
           </div>
           <div className="row">
-            {this.props.name === "followthru" ?
+            {/*Display mobile apps differently as the image ratio will be different*/}
+            {this.props.type === "mobile" ?
               <div className="col-xs-10 col-sm-8 col-md-6 col-xs-offset-1 col-sm-offset-2 col-md-offset-3">
                 <img className="img-responsive img-rounded projectPreviewImage" src={`${this.props.image2}`}/>
               </div>
@@ -23,13 +24,6 @@ export default class ProjectPreview extends React.Component {
                 <img className="img-responsive img-rounded projectPreviewImage" src={`${this.props.image2}`}/>
               </div>
             }
-
-            {/*<div className="col-xs-12 col-sm-10 col-md-4 col-xs-offset-0 col-sm-offset-1 col-md-offset-1">
-              <img className="img-responsive img-rounded projectPreviewImage" src={`img/${this.props.image1}`}/>
-            </div>
-            <div className="col-xs-12 col-sm-10 col-md-4 col-xs-offset-0 col-sm-offset-1 col-md-offset-1">
-              <img className="img-responsive img-rounded projectPreviewImage" src={`img/${this.props.image2}`}/>
-            </div>*/}
           </div>
           <div className="row">
             <div className="col-xs-12 col-sm-10 col-md-6 col-xs-offset-0 col-sm-offset-1 col-md-offset-3 center-text">
@@ -41,7 +35,7 @@ export default class ProjectPreview extends React.Component {
             </div>
           </div>
           {/*Adding in the contact callout here in order to maintain symmetry of the centering*/}
-          {this.props.id === "trex-racer" ?
+          {this.props.position === "last" ?
             <div>
               <div className="row projectPreviewCallout">
                 <div className="col-xs-12 col-sm-12 col-md-12 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 center-text">
