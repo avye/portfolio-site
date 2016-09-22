@@ -7,7 +7,6 @@ import { LinkContainer } from 'react-router-bootstrap';
 import { applyContainerQuery } from 'react-container-query';
 
 var Scroll = require('react-scroll');
-var Element = Scroll.Element;
 var scroller = Scroll.scroller;
 
 class NavBar extends React.Component {
@@ -16,14 +15,6 @@ class NavBar extends React.Component {
     this.state = {
       navExpanded: false
     };
-  }
-
-  onNavItemClick() {
-    this.setState({ navExpanded: false });
-  }
-
-  onNavbarToggle() {
-    this.setState({ navExpanded: ! this.state.navExpanded });
   }
 
   onWorkButtonClick() {
@@ -37,17 +28,17 @@ class NavBar extends React.Component {
 
   render() {
     return (
-      <Navbar fixedTop navExpanded={ this.state.navExpanded } onToggle={ this.onNavbarToggle.bind(this) }>
-    <Navbar.Header>
-      <Navbar.Brand>
-        <Link to="/">
-          <h4>AV</h4>
-        </Link>
-      </Navbar.Brand>
-      <Navbar.Toggle>
-        <img src="/img/Menu.svg"></img>
-      </Navbar.Toggle>
-    </Navbar.Header>
+      <Navbar fixedTop>
+        <Navbar.Header>
+          <Navbar.Brand>
+            <Link to="/">
+              <h4>AV</h4>
+            </Link>
+          </Navbar.Brand>
+          <Navbar.Toggle>
+            <img src="/img/Menu.svg"></img>
+          </Navbar.Toggle>
+        </Navbar.Header>
     {this.props.containerQuery.widthLargerThan1195 ?
       <Nav pullRight>
         <NavDropdown eventKey={1} title={
@@ -73,10 +64,10 @@ class NavBar extends React.Component {
           <NavItem eventKey={1.1} onClick={ () => this.onWorkButtonClick() }>Work</NavItem>
         </LinkContainer>
         <LinkContainer to={{ pathname: 'about' }}>
-          <NavItem eventKey={1.3} onClick={ this.onNavItemClick }>About</NavItem>
+          <NavItem eventKey={1.3}>About</NavItem>
         </LinkContainer>
         <LinkContainer to={{ pathname: 'contact' }}>
-          <NavItem eventKey={1.3} onClick={ this.onNavItemClick }><p className=""><b>CONTACT</b></p></NavItem>
+          <NavItem eventKey={1.3}><p className=""><b>CONTACT</b></p></NavItem>
         </LinkContainer>
         </Nav>
       </Navbar.Collapse>
