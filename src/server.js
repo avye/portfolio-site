@@ -3,6 +3,7 @@
 import path from 'path';
 import { Server } from 'http';
 import Express from 'express';
+import Helmet from 'helmet'
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
@@ -32,7 +33,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 app.use(Express.static(path.join(__dirname, 'static')));
-
+app.use(Helmet());
 
 
 // Want this to be handled different as it is the contact form submission
