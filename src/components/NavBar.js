@@ -32,7 +32,7 @@ class NavBar extends React.Component {
         <Navbar.Header>
           <Navbar.Brand>
             <Link to="/">
-              <h4>AV</h4>
+              <img src="/img/logo-150w.png" className="brandLogo"></img>
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle>

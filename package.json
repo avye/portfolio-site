@@ -5,6 +5,7 @@
   "main": "src/server.js",
   "scripts": {
     "postinstall": "node-sass src/static/scss/main.scss src/static/css/style.css && npm run build",
+    "sass": "node-sass src/static/scss/main.scss src/static/css/style.css",
     "start": "NODE_ENV=production node_modules/.bin/babel-node --presets 'react,es2015' src/server.js",
     "build": "NODE_ENV=production node_modules/.bin/webpack -p"
   },
