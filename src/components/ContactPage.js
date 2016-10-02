@@ -73,7 +73,7 @@ export default class ContactPage extends React.Component {
             <div className="form-group">
               <label for="contactCompany" className="col-xs-12 col-sm-11 col-md-10 col-xs-offset-0 col-sm-offset-1 col-md-offset-2 control-label contactFormSpacing">Company</label>
               <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2">
-                <input type="text" className=" inputForm form-control input-lg" id="contactCompany" placeholder="Who do you work for?" ref='contactCompany' required="required"></input>
+                <input type="text" className=" inputForm form-control input-lg" id="contactCompany" placeholder="Who do you work for?" ref='contactCompany'></input>
               </div>
             </div>
             <div className="form-group">
@@ -85,7 +85,7 @@ export default class ContactPage extends React.Component {
             <div className="form-group">
               <label for="contactDescription" className="col-xs-12 col-sm-11 col-md-10 col-xs-offset-0 col-sm-offset-1 col-md-offset-2 control-label contactFormSpacing">Description</label>
               <div className="col-xs-12 col-sm-10 col-md-8 col-xs-offset-0 col-sm-offset-1 col-md-offset-2">
-                <input type="text" className="inputForm input-lg form-control" id="contactDescription" placeholder="How can I help?" ref='contactDescription'></input>
+                <input type="text" className="inputForm input-lg form-control" id="contactDescription" placeholder="How can I help?" ref='contactDescription' required="required"></input>
               </div>
             </div>
             <div className="form-group">
