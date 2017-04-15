@@ -21,7 +21,7 @@ export default class WelcomeGreeting extends React.Component {
       <div className="container">
         <div className="row">
           <div className="col-xs-8 col-sm-6 col-md-4 col-xs-offset-2 col-sm-offset-3 col-md-offset-4  center-text">
-            <img src="https://d3bfbpfngihhgs.cloudfront.net/me.jpg" className="img-responsive img-circle center-block"/>
+            <img src="../static/img/me.jpg" className="img-responsive img-circle center-block"/>
           </div>
         </div>
         <div className="row">
