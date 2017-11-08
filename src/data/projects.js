@@ -2,6 +2,19 @@
 
 const projects = [
   {
+    id: 'center-state',
+    position: '',
+    name: 'Center State Media',
+    subtitle: 'UI/UX - FRONT-END FUNCTIONALITY - SERVER LAYOUT',
+    type: 'web',
+    image1: '',
+    image2: 'https://s3-us-west-2.amazonaws.com/av-personal-site/centerState.png',
+    link: 'http://www.centerstatemedia.com/#/home',
+    button: 'VIEW SITE',
+    technologies: 'Angular, Bootstrap, Node, and Express',
+    description: 'I worked with Center State Media to create a cohesive user experience that works well across all platforms. As a digital media company, I wanted to highlight their visually stunning work and make that the focal point of the entire site. As such, all of the site elements are clean and minimal in order to really make the content pop.'
+  },
+  {
     id: 'followthru',
     position: '',
     name: 'followthru',
@@ -29,7 +42,7 @@ const projects = [
   },
   {
     id: 'trex-racer',
-    position: '',
+    position: 'last',
     name: 'T-Rex Racer',
     subtitle: 'BACK-END DESIGN - UI - FRONT-END FUNCTIONALITY',
     type: 'web',
@@ -39,19 +52,6 @@ const projects = [
     button: 'VIEW SITE',
     technologies: 'Angular, Node, Express, Socket.IO, and MongoDB',
     description: 'Ever find yourself using a boring stopwatch? T-Rex Racer is an interactive timer that has a fun multiplayer chat and game functionality. I worked across the stack and not only implemented front-end game functionality but also designed the back-end to track game statistics and persist user information.'
-  },
-  {
-    id: 'center-state',
-    position: 'last',
-    name: 'Center State Media',
-    subtitle: 'UI/UX - FRONT-END FUNCTIONALITY - SERVER LAYOUT',
-    type: 'web',
-    image1: '',
-    image2: 'https://s3-us-west-2.amazonaws.com/av-personal-site/centerState.png',
-    link: 'http://www.centerstatemedia.com/#/home',
-    button: 'VIEW SITE',
-    technologies: 'Angular, Bootstrap, Node, and Express',
-    description: 'I worked with Center State Media to create a cohesive user experience that works well across all platforms. As a digital media company, I wanted to highlight their visually stunning work and make that the focal point of the entire site. As such, all of the site elements are clean and minimal in order to really make the content pop.'
   }
 ];
 
